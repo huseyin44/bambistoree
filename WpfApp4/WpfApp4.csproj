@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F4B3D25-C6E8-4EB1-893E-72657635F047}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp4</RootNamespace>
+    <AssemblyName>WpfApp4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="kullanımkosulları\gizililikguvenlik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanımkosulları\guvenlialisveris.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanımkosulları\hakkimizda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanımkosulları\iletisimsayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanımkosulları\iptalveiade.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanımkosulları\islemrehberi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanımkosulları\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="kullanımkosulları\gizililikguvenlik.xaml.cs">
+      <DependentUpon>gizililikguvenlik.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanımkosulları\guvenlialisveris.xaml.cs">
+      <DependentUpon>guvenlialisveris.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanımkosulları\hakkimizda.xaml.cs">
+      <DependentUpon>hakkimizda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanımkosulları\iletisimsayfasi.xaml.cs">
+      <DependentUpon>iletisimsayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanımkosulları\iptalveiade.xaml.cs">
+      <DependentUpon>iptalveiade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanımkosulları\islemrehberi.xaml.cs">
+      <DependentUpon>islemrehberi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanımkosulları\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\clock.png" />
+    <Resource Include="images\icon\android_uygulama.png" />
+    <Resource Include="images\icon\apple_uygulama.png" />
+    <Resource Include="images\icon\bambistore-logo %281%29.png" />
+    <Resource Include="images\icon\caterpillar-132.jpg" />
+    <Resource Include="images\icon\eski-kis-_yuzde_40-126.jpg" />
+    <Resource Include="images\icon\facebook.png" />
+    <Resource Include="images\icon\footer_bilgiler.jpg" />
+    <Resource Include="images\icon\google-plus.png" />
+    <Resource Include="images\icon\instagram.png" />
+    <Resource Include="images\icon\kargo_bedav.jpg" />
+    <Resource Include="images\icon\Kart.jpg" />
+    <Resource Include="images\icon\pinterest.png" />
+    <Resource Include="images\icon\search.png" />
+    <Resource Include="images\icon\shopping-bag.png" />
+    <Resource Include="images\icon\truck.png" />
+    <Resource Include="images\icon\twitter.png" />
+    <Resource Include="images\onizleme\siyah-kadin-acik-ayakkabi-l0501802165-2dfa.jpg" />
+    <Resource Include="images\onizleme\siyah-kadin-acik-ayakkabi-l0501802165-d30e.jpg" />
+    <Resource Include="images\yenicantakoleksyionu.jpg" />
+    <Resource Include="images\yenicoksatanlar.jpg" />
+    <Resource Include="images\yenisezonErkekkk.jpg" />
+    <Resource Include="images\yenisezonKadin.jpg" />
+    <Resource Include="images\yenisezonun trendleri.jpg" />
+    <Resource Include="slide\sl01.jpg" />
+    <Resource Include="slide\sl02.jpg" />
+    <Resource Include="slide\sl03.jpg" />
+    <Resource Include="slide\sl04.jpg" />
+    <Resource Include="slide\sl05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\pudra-kadin-ayakkabi-1.jpg" />
+    <Resource Include="images\pudra-kadin-ayakkabi-l0503721009-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\beyaz-kadin-sneakers-1.jpg" />
+    <Resource Include="images\beyaz-kadin-sneakers-l0806100009-7d25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\black-bayan-bot-1.jpg" />
+    <Resource Include="images\harley-davidson-black-bot-k0777009603-1694.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\caterpillar-chocolate-bot-k0111000101-c329.jpg" />
+    <Resource Include="images\caterpillar-sundance-bot-k0111000101-93ec.jpg" />
+    <Resource Include="images\chocolate-bayan-bot-1.jpg" />
+    <Resource Include="images\sundance-bayan-bot-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\black-kadin-bot-k0777042303-08d9.jpg" />
+    <Resource Include="images\black-kadin-bot-k0777042303-2459.jpg" />
+    <Resource Include="images\siyah-bot-k0528051003-6033.jpg" />
+    <Resource Include="images\siyah-bot-k0528051003-8e40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\beyaz-bot-k0536410009-b0fd.jpg" />
+    <Resource Include="images\beyaz-bot-k0536410009-cf6d.jpg" />
+    <Resource Include="images\siyah-bot-k0512111009-0f55.jpg" />
+    <Resource Include="images\siyah-bot-k0512111009-e4ca.jpg" />
+    <Resource Include="images\siyah-cizme-k0721050509-4912.jpg" />
+    <Resource Include="images\siyah-cizme-k0721050509-f6f0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\84521201_521222405487298_1641438335123060569_n.jpg" />
+    <Resource Include="images\87241848_133192488021698_5266687116169045006_n.jpg" />
+    <Resource Include="images\88169161_1565333710309061_2735520093477646624_n.jpg" />
+    <Resource Include="images\88237097_1105580523118695_9054300385336505773_n.jpg" />
+    <Resource Include="images\89093953_2503686056547045_857080763492944866_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\mail.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
