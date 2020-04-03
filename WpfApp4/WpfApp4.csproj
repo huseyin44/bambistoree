@@ -67,6 +67,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="kullanımkosulları\iletisim.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="kullanımkosulları\iletisimsayfasi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,6 +84,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="kullanımkosulları\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanımkosulları\sepetim.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanımkosulları\siparislerim.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -100,6 +112,9 @@
     <Compile Include="kullanımkosulları\hakkimizda.xaml.cs">
       <DependentUpon>hakkimizda.xaml</DependentUpon>
     </Compile>
+    <Compile Include="kullanımkosulları\iletisim.xaml.cs">
+      <DependentUpon>iletisim.xaml</DependentUpon>
+    </Compile>
     <Compile Include="kullanımkosulları\iletisimsayfasi.xaml.cs">
       <DependentUpon>iletisimsayfasi.xaml</DependentUpon>
     </Compile>
@@ -111,6 +126,12 @@
     </Compile>
     <Compile Include="kullanımkosulları\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanımkosulları\sepetim.xaml.cs">
+      <DependentUpon>sepetim.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanımkosulları\siparislerim.xaml.cs">
+      <DependentUpon>siparislerim.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -215,6 +236,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\icon\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\240_F_323360929_QSiFN4w93mSF3pjTuwsfeYtJAr2ZvlgC.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

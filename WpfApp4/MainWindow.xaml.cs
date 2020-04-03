@@ -179,6 +179,18 @@ namespace WpfApp4
             Page page = new guvenlialisveris();
             this.Content = page;
         }
+
+        private void siparislerim_Click(object sender, RoutedEventArgs e)
+        {
+            Page page = new siparislerim();
+            this.Content = page;
+        }
+
+        private void alisverissepetim_Click(object sender, RoutedEventArgs e)
+        {
+                Page page = new sepetim();
+                this.Content = page;
+        }
     }
 }  
 

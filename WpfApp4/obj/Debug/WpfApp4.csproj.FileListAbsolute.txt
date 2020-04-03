@@ -27,3 +27,7 @@ C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanımkosulları\isle
 C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanımkosulları\islemrehberi.baml
 C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanımkosulları\guvenlialisveris.g.cs
 C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanımkosulları\guvenlialisveris.baml
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanımkosulları\siparislerim.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanımkosulları\siparislerim.baml
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanımkosulları\sepetim.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanımkosulları\sepetim.baml

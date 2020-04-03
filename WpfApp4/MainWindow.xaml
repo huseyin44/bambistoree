@@ -82,7 +82,7 @@
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <TextBox Style="{DynamicResource aramatexbox}" Grid.Column="0"  BorderThickness="0"></TextBox>
-                            <Button x:Name="ara" Grid.Column="1" Height="43" Width="40"  Content="ARA" HorizontalAlignment="Center" BorderBrush="Black" BorderThickness="1" Style="{DynamicResource buttonbeyazgozukme}"/>
+                            <Button x:Name="ara" Grid.Column="1" Height="43" Width="40"  Content="ARA"  VerticalAlignment="Bottom" BorderBrush="Black" BorderThickness="1" Style="{DynamicResource buttonbeyazgozukme}"/>
                         </Grid>
                     </Border>
                     <!-- Sepetim -->
@@ -1359,7 +1359,7 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
                             <TextBlock Text="ALIŞVERİŞ BİLGİLERİM" Grid.Row="0" VerticalAlignment="Center" FontSize="15"></TextBlock>
-                            <Button Grid.Row="1" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="siparislerim">
+                            <Button Grid.Row="1" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="siparislerim" Click="siparislerim_Click">
                             <TextBlock Text="SİPARİŞLERİM" Grid.Row="1" FontSize="13">
                                 <TextBlock.Style>
                                     <Style TargetType="TextBlock" >
@@ -1372,7 +1372,7 @@
                                 </TextBlock.Style>
                             </TextBlock>
                             </Button>
-                            <Button Grid.Row="2" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="alisverissepetim">
+                            <Button Grid.Row="2" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="alisverissepetim" Click="alisverissepetim_Click">
                             <TextBlock Text="İŞLEM ALIŞVERİŞ SEPETİM" Grid.Row="2" FontSize="12">
                                 <TextBlock.Style>
                                     <Style TargetType="TextBlock" >
