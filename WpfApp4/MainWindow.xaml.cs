@@ -1,20 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
-using WpfApp4.kullanımkosulları;
-using WpfApp4.KullanımSartları;
+using WpfApp4.kullanıcıkosullari;
 
 
 namespace WpfApp4
@@ -66,6 +55,10 @@ namespace WpfApp4
             slide.Source = image;
         }
 
+        private void Window_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = System.Windows.WindowState.Maximized;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("http://www.ticimax.com/");
@@ -81,7 +74,7 @@ namespace WpfApp4
             System.Diagnostics.Process.Start("https://www.facebook.com/bambionline");
         }
 
-        private void twitter_Click(object sender, RoutedEventArgs e)
+        private void Twitter_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://twitter.com/bambiayakkabi");
         }
@@ -137,60 +130,69 @@ namespace WpfApp4
         {
             kadinkategori.Visibility = Visibility.Hidden;
         }
-
         private void kullanımsart_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new Page1();
-            this.Content = page;
+            Window window = new Page1();
+            window.Show();
+            this.Close();
         }
 
         private void iletisim_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new iletisimsayfasi();
-            this.Content = page;
+            Window window = new iletisim();
+            window.Show();
+            this.Close();
         }
 
         private void hakkimizda_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new hakkimizda();
-            this.Content = page;
+            Window window = new hakkimizda();
+            window.Show();
+            this.Close();
         }
 
         private void gizlilikguven_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new gizililikguvenlik();
-            this.Content = page;
+            Window window = new gizlilikguvenlik();
+            window.Show();
+            this.Close();
         }
 
         private void iptaliadekosul_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new iptalveiade();
-            this.Content = page;
+            Window window = new iptalveiade();
+            window.Show();
+            this.Close();
         }
 
         private void islemrehberi_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new islemrehberi();
-            this.Content = page;
+            Window window = new islemrehberi();
+            window.Show();
+            this.Close();
         }
 
         private void guvenlialisveris_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new guvenlialisveris();
-            this.Content = page;
+            Window window = new guvenlialisveris();
+            window.Show();
+            this.Close();
         }
 
         private void siparislerim_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new siparislerim();
-            this.Content = page;
+            Window window = new siparislerim();
+            window.Show();
+            this.Close();
         }
 
         private void alisverissepetim_Click(object sender, RoutedEventArgs e)
         {
-                Page page = new sepetim();
-                this.Content = page;
+            Window window = new gizlilikguvenlik();
+            window.Show();
+            this.Close();
         }
+
     }
 }  
 

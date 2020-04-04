@@ -55,43 +55,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="kullanımkosulları\gizililikguvenlik.xaml">
+    <Page Include="kullanıcıkosullari\gizlilikguvenlik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="kullanımkosulları\guvenlialisveris.xaml">
+    <Page Include="kullanıcıkosullari\guvenlialisveris.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="kullanımkosulları\hakkimizda.xaml">
+    <Page Include="kullanıcıkosullari\hakkimizda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="kullanımkosulları\iletisim.xaml">
+    <Page Include="kullanıcıkosullari\iletisim.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="kullanımkosulları\iletisimsayfasi.xaml">
+    <Page Include="kullanıcıkosullari\iptalveiade.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="kullanımkosulları\iptalveiade.xaml">
+    <Page Include="kullanıcıkosullari\islemrehberi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="kullanımkosulları\islemrehberi.xaml">
+    <Page Include="kullanıcıkosullari\Page1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="kullanımkosulları\Page1.xaml">
+    <Page Include="kullanıcıkosullari\sepetim.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="kullanımkosulları\sepetim.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="kullanımkosulları\siparislerim.xaml">
+    <Page Include="kullanıcıkosullari\siparislerim.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -103,34 +99,31 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="kullanımkosulları\gizililikguvenlik.xaml.cs">
-      <DependentUpon>gizililikguvenlik.xaml</DependentUpon>
+    <Compile Include="kullanıcıkosullari\gizlilikguvenlik.xaml.cs">
+      <DependentUpon>gizlilikguvenlik.xaml</DependentUpon>
     </Compile>
-    <Compile Include="kullanımkosulları\guvenlialisveris.xaml.cs">
+    <Compile Include="kullanıcıkosullari\guvenlialisveris.xaml.cs">
       <DependentUpon>guvenlialisveris.xaml</DependentUpon>
     </Compile>
-    <Compile Include="kullanımkosulları\hakkimizda.xaml.cs">
+    <Compile Include="kullanıcıkosullari\hakkimizda.xaml.cs">
       <DependentUpon>hakkimizda.xaml</DependentUpon>
     </Compile>
-    <Compile Include="kullanımkosulları\iletisim.xaml.cs">
+    <Compile Include="kullanıcıkosullari\iletisim.xaml.cs">
       <DependentUpon>iletisim.xaml</DependentUpon>
     </Compile>
-    <Compile Include="kullanımkosulları\iletisimsayfasi.xaml.cs">
-      <DependentUpon>iletisimsayfasi.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="kullanımkosulları\iptalveiade.xaml.cs">
+    <Compile Include="kullanıcıkosullari\iptalveiade.xaml.cs">
       <DependentUpon>iptalveiade.xaml</DependentUpon>
     </Compile>
-    <Compile Include="kullanımkosulları\islemrehberi.xaml.cs">
+    <Compile Include="kullanıcıkosullari\islemrehberi.xaml.cs">
       <DependentUpon>islemrehberi.xaml</DependentUpon>
     </Compile>
-    <Compile Include="kullanımkosulları\Page1.xaml.cs">
+    <Compile Include="kullanıcıkosullari\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="kullanımkosulları\sepetim.xaml.cs">
+    <Compile Include="kullanıcıkosullari\sepetim.xaml.cs">
       <DependentUpon>sepetim.xaml</DependentUpon>
     </Compile>
-    <Compile Include="kullanımkosulları\siparislerim.xaml.cs">
+    <Compile Include="kullanıcıkosullari\siparislerim.xaml.cs">
       <DependentUpon>siparislerim.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">

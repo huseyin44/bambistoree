@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp4"
         mc:Ignorable="d"
+        Loaded="Window_Loaded_1"
         Title="MainWindow" Height="6400" Width="1519">
+
     <ScrollViewer x:Name="scrollviewer">
+
         <Grid Height="6400" Width="1519">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
@@ -1126,7 +1129,7 @@
                                 </Style>
                             </Button.Style>
                         </Button>
-                        <Button Grid.Column="2" Height="33" Margin="0,10,0,0" Name="twitter" Click="twitter_Click">
+                        <Button Grid.Column="2" Height="33" Margin="0,10,0,0" Name="twitter" Click="Twitter_Click">
                             <Image Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\twitter.png">
                             </Image>
                             <Button.Style>
@@ -1262,19 +1265,20 @@
                                         </Style>
                                     </TextBlock.Style>
                                 </TextBlock>
+
                             </Button>
                             <Button Grid.Row="2" Style="{DynamicResource butonbeyazyap}" HorizontalAlignment="Left" x:Name="iletisim" Click="iletisim_Click" VerticalAlignment="Center">
-                            <TextBlock Text="İletişim"  FontSize="12">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock" >
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
+                                <TextBlock Text="İletişim"  FontSize="12">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                             </Button>
                         </Grid>
 
@@ -1288,30 +1292,30 @@
                             </Grid.RowDefinitions>
                             <TextBlock Text="SÖZLEŞMELER" Grid.Row="0" VerticalAlignment="Center" FontSize="15"></TextBlock>
                             <Button Grid.Row="1" Style="{DynamicResource butonbeyazyap}" Name="hakkimizda" HorizontalAlignment="Left" VerticalAlignment="Center" Click="hakkimizda_Click">
-                            <TextBlock Text="HAKKIMIZDA"  FontSize="13">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock" >
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
+                                <TextBlock Text="HAKKIMIZDA"  FontSize="13">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                             </Button>
                             <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Name="gizlilikguven" Style="{DynamicResource butonbeyazyap}" Click="gizlilikguven_Click">
-                            <TextBlock Text="GİZLİLİK GÜVENLİK" Grid.Row="2" FontSize="12">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock" >
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
+                                <TextBlock Text="GİZLİLİK GÜVENLİK" Grid.Row="2" FontSize="12">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                             </Button>
                         </Grid>
                         <!-- 25.row  4.column-->
@@ -1324,30 +1328,30 @@
                             </Grid.RowDefinitions>
                             <TextBlock Text="YARDIM" Grid.Row="0" VerticalAlignment="Center" FontSize="15"></TextBlock>
                             <Button Grid.Row="1" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="iptaliadekosul" Click="iptaliadekosul_Click">
-                            <TextBlock Text="İPTAL VE İADE KOŞULLARI" Grid.Row="1" FontSize="13">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock" >
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
+                                <TextBlock Text="İPTAL VE İADE KOŞULLARI" Grid.Row="1" FontSize="13">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                             </Button>
                             <Button Grid.Row="2" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="islemrehberi" Click="islemrehberi_Click">
-                            <TextBlock Text="İŞLEM REHBERİ" Grid.Row="2" FontSize="12">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock" >
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
+                                <TextBlock Text="İŞLEM REHBERİ" Grid.Row="2" FontSize="12">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                             </Button>
                         </Grid>
                         <!-- 25.row  6.column-->
@@ -1360,29 +1364,29 @@
                             </Grid.RowDefinitions>
                             <TextBlock Text="ALIŞVERİŞ BİLGİLERİM" Grid.Row="0" VerticalAlignment="Center" FontSize="15"></TextBlock>
                             <Button Grid.Row="1" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="siparislerim" Click="siparislerim_Click">
-                            <TextBlock Text="SİPARİŞLERİM" Grid.Row="1" FontSize="13">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock" >
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
+                                <TextBlock Text="SİPARİŞLERİM" Grid.Row="1" FontSize="13">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                             </Button>
                             <Button Grid.Row="2" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="alisverissepetim" Click="alisverissepetim_Click">
-                            <TextBlock Text="İŞLEM ALIŞVERİŞ SEPETİM" Grid.Row="2" FontSize="12">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock" >
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
+                                <TextBlock Text="İŞLEM ALIŞVERİŞ SEPETİM" Grid.Row="2" FontSize="12">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
                                 </TextBlock>
                             </Button>
                             <Button Grid.Row="3" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="guvenlialisveris" Click="guvenlialisveris_Click">
@@ -1540,6 +1544,7 @@
                     <Label Grid.Column="2" VerticalAlignment="Center" HorizontalContentAlignment="Left" Height="25" Content="sistemleri ile hazırlanmıştır."/>
                 </Grid>
             </Grid>
+            
         </Grid>
     </ScrollViewer>
 </Window>
