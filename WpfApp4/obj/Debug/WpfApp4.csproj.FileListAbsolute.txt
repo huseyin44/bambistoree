@@ -31,3 +31,7 @@ C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\isl
 C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\Page1.baml
 C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\sepetim.baml
 C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\siparislerim.baml
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\siparistakip.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\siparistakip.baml
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\uyegirisi.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\uyegirisi.baml

@@ -161,5 +161,17 @@ namespace WpfApp4.kullanıcıkosullari
             window.Show();
             this.Close();
         }
+        private void anasayfa_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new MainWindow();
+            window.Show();
+            this.Close();
+        }
+        private void siparistakip_Click_(object sender, RoutedEventArgs e)
+        {
+            Window window = new siparistakip();
+            window.Show();
+            this.Close();
+        }
     }
 }

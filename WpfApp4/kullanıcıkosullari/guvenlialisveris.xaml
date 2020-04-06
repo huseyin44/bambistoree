@@ -30,7 +30,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <!-- SiparişTakibi -->
-                <Button Grid.Column="0" Height="26.4"  Background="White" BorderThickness="0" VerticalAlignment="Stretch" Style="{DynamicResource buttonbeyazgozukme}">
+                <Button Grid.Column="0" Height="26.4"  Background="White" BorderThickness="0" VerticalAlignment="Stretch" Style="{DynamicResource buttonbeyazgozukme}" Click="siparistakip_Click_">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -40,7 +40,9 @@
                         <Label Content="Sipariş Takibi" VerticalAlignment="Top" Height="37" FontFamily="Roboto" FontSize="13" Grid.ColumnSpan="2" Margin="137,0,-0.2,-10.6"  />
                     </Grid>
                 </Button>
-                <Image  Grid.Column="1" Height="60" Width="160" Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\bambistore-logo (1).png" />
+                <Button Grid.Column="1" Style="{DynamicResource butonbeyazyap}" Click="anasayfa_Click">
+                    <Image Height="60" Width="160" Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\bambistore-logo (1).png" />
+                </Button>
                 <!-- 1row 2column-->
                 <Grid Grid.Column="2">
                     <Grid.ColumnDefinitions>
@@ -68,7 +70,7 @@
                         </Grid>
                     </Border>
                     <!-- Sepetim -->
-                    <Button Grid.Column="1" Grid.Row="1" Background="White" BorderThickness="0" Width="154" Height="26.4" FontSize="12" Margin="0,0,85,0" Style="{DynamicResource sepetim}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
+                    <Button Grid.Column="1" Grid.Row="1" Background="White" BorderThickness="0" Width="154" Height="26.4" FontSize="12" Margin="0,0,85,0" Style="{DynamicResource sepetim}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Click="alisverissepetim_Click">
                         <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Label Content="Sepetim" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
                             <Image Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\shopping-bag.png " Height="24" Width="24"/>
@@ -87,7 +89,7 @@
                                     <RowDefinition/>
                                     <RowDefinition Height="40"/>
                                 </Grid.RowDefinitions>
-                                <Button Content="SATIN AL" Grid.Row="1" HorizontalAlignment="Left" Width="90"  Style="{DynamicResource sepetim}"/>
+                                <Button Content="SATIN AL" Grid.Row="1" HorizontalAlignment="Left" Width="90"  Style="{DynamicResource sepetim}" Click="alisverissepetim_Click"/>
                             </Grid>
                         </Grid>
                     </Border>
@@ -117,7 +119,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <!-- 0.column anasayfa butonu  -->
-                    <Button  Grid.Column="0" Name="Anasayfa"  BorderThickness="0" >
+                    <Button  Grid.Column="0" Name="Anasayfa"  BorderThickness="0" Click="anasayfa_Click" >
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="White"/>

@@ -91,6 +91,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="kullanıcıkosullari\siparistakip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanıcıkosullari\uyegirisi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -125,6 +133,12 @@
     </Compile>
     <Compile Include="kullanıcıkosullari\siparislerim.xaml.cs">
       <DependentUpon>siparislerim.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanıcıkosullari\siparistakip.xaml.cs">
+      <DependentUpon>siparistakip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanıcıkosullari\uyegirisi.xaml.cs">
+      <DependentUpon>uyegirisi.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -232,6 +246,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\240_F_323360929_QSiFN4w93mSF3pjTuwsfeYtJAr2ZvlgC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\turkey.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,7 +17,7 @@ namespace WpfApp4
         DispatcherTimer timer;
         int i = 0;
         TimeSpan zaman;
-
+   
         public MainWindow()
         {
             InitializeComponent();
@@ -35,7 +35,8 @@ namespace WpfApp4
                 zaman = zaman.Add(TimeSpan.FromSeconds(-1));
             }, Application.Current.Dispatcher);
             timer.Start();
-        }
+       
+    }
         void timer_Tick(object sender, EventArgs e)
         {
             i++;
@@ -54,6 +55,18 @@ namespace WpfApp4
             image.EndInit();
             slide.Source = image;
         }
+        public readonly gizlilikguvenlik giz = new gizlilikguvenlik();
+        public readonly guvenlialisveris gvnalsvrs = new guvenlialisveris();
+        public readonly hakkimizda hkmzda = new hakkimizda();
+        public readonly iletisim iltsm = new iletisim();
+        public readonly iptalveiade iptlveiade = new iptalveiade();
+        public readonly islemrehberi islmrhbr = new islemrehberi();
+        public readonly Page1 pg1 = new Page1();
+        public readonly sepetim sptm = new sepetim();
+        public readonly siparislerim sprlrm = new siparislerim();
+        public readonly siparistakip sprtkp = new siparistakip();
+        public readonly uyegirisi uygrs = new uyegirisi();
+
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
@@ -184,15 +197,44 @@ namespace WpfApp4
             Window window = new siparislerim();
             window.Show();
             this.Close();
+            
         }
 
         private void alisverissepetim_Click(object sender, RoutedEventArgs e)
         {
-            Window window = new gizlilikguvenlik();
+            Window window = new sepetim();
             window.Show();
             this.Close();
         }
+        private void anasayfa_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new MainWindow();
+            window.Show();
+            this.Close();
+            if (uygrs.eposta.Text == "huseyin-545@hotmail.com"&&uygrs.sifre.Text=="1234567")
+            {
+                uyeyerigrid.Visibility = Visibility.Hidden;
+                uyeyeri44.Visibility = Visibility.Visible;
+            }
+        }
 
+        private void siparistakip_Click_(object sender, RoutedEventArgs e)
+        {
+                Window window = new siparistakip();
+                window.Show();
+                this.Close();
+        }
+
+        private void uyegirisi_Click(object sender, RoutedEventArgs e)
+        {
+
+            Window window = new uyegirisi();
+            window.Show();
+            this.Close();
+            
+        }
+        
+       
     }
 }  
 
