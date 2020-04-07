@@ -629,8 +629,24 @@ namespace WpfApp4
             }
             
         }
-   
 
+        private void sepeteeklee_Click(object sender, RoutedEventArgs e)
+        {
+            urunusepeteekle urunusepet = new urunusepeteekle();
+            urunusepet.image0.Source = image444.Source;
+            urunusepet.image2.Source = image444.Source;
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();
+            bitmapImage.UriSource= new Uri("C:/Users/Hüseyin/Desktop/bambistoree/WpfApp4/images/onizleme/siyah-kadin-acik-ayakkabi-l0501802165-2dfa.jpg");
+            bitmapImage.EndInit();
+            urunusepet.image1.Source = bitmapImage;
+            urunusepet.labe1.Content = "BAMBİ";
+            urunusepet.labe2.Content = "SIYAH KADIN AÇIK AYAKKABI L0501802165";
+            urunusepet.labe3.Content = label1.Content;
+            urunusepet.texblock.Text = "131.12";
+            urunusepet.Show();
+            this.Close();
+        }
     }
 }  
 

@@ -418,20 +418,20 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Button Grid.Column="1" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle_MouseEnter" MouseLeave="favoriekle_MouseLeave">
-                <Image >
+                <Image Name="image444">
                     <Image.Style>
                         <Style TargetType="Image">
-                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\onizleme\siyah-kadin-acik-ayakkabi-l0501802165-d30e.jpg"/>
+                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\onizleme\siyah-kadin-acik-ayakkabi-l0501802165-d30e.jpg" x:Name="image0"/>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\onizleme\siyah-kadin-acik-ayakkabi-l0501802165-2dfa.jpg" />
+                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\onizleme\siyah-kadin-acik-ayakkabi-l0501802165-2dfa.jpg" x:Name="image1" />
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
                     </Image.Style>
                 </Image>
                 </Button>
-                <Button Grid.Column="1" Grid.Row="1" BorderThickness="0"  >
+                <Button Grid.Column="1" Grid.Row="1" BorderThickness="0" Name="siyahkadinayakkabi" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="White"/>
@@ -464,7 +464,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button x:Name="sepeteeklee" Visibility="Hidden" Grid.Column="1" Grid.Row="0" Height="50" Width="40"  MouseEnter="favoriekle_MouseEnter" MouseLeave="favoriekle_MouseLeave" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" >
+                <Button x:Name="sepeteeklee" Visibility="Hidden" Grid.Column="1" Grid.Row="0" Height="50" Width="40"  MouseEnter="favoriekle_MouseEnter" MouseLeave="favoriekle_MouseLeave" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" Click="sepeteeklee_Click">
                     <Grid>
                         <Ellipse Width="40" Height="40" Fill="White"/>
                         <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
@@ -475,8 +475,8 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Label Grid.Row="2" Grid.Column="1" Margin="15,0,0,0" VerticalAlignment="Center">163,90 TL</Label>
-                <Border Grid.Row="3" Grid.Column="1" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="166.89" HorizontalAlignment="Left" Height="31.6" >
+                <Label Grid.Row="2" Grid.Column="1" Margin="15,0,0,0" VerticalAlignment="Center" Name="label1">163,90 TL</Label>
+                <Border Grid.Row="3" Grid.Column="1" BorderThickness="1,1,1,1"  VerticalAlignment="top" Width="166.89" HorizontalAlignment="Left" Height="31.6" >
                     <Border.BorderBrush>
                         <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
                             <DrawingBrush.Drawing>
@@ -493,7 +493,7 @@
                             </DrawingBrush.Drawing>
                         </DrawingBrush>
                     </Border.BorderBrush>
-                    <TextBlock Text="Sepet Fiyatı: 131,12 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Sepet Fiyatı: 131,12 TL!" Name="texblock" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Border>
                 <!-- 3.column -->
                 <Button Grid.Column="3" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle2_MouseEnter" MouseLeave="favoriekle2_MouseLeave" >

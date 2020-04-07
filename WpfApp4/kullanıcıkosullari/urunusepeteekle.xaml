@@ -241,9 +241,75 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Image Grid.Column="1" Height="150" Width="100" VerticalAlignment="Top" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\black-kadin-bot-k0777042303-08d9.jpg"/>
-                    <Image Grid.Column="1" Height="150" Width="100" Margin="0,0,0,15" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\black-kadin-bot-k0777042303-08d9.jpg"/>
-                    <Image Grid.Column="2" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\black-kadin-bot-k0777042303-08d9.jpg"/>
+                    <Image Grid.Column="1" Height="150" Width="100" VerticalAlignment="Top" Name="image0" />
+                    <Image Grid.Column="1" Height="150" Width="100" Margin="0,0,0,15" Name="image1" />
+                    <Image Grid.Column="2" Name="image2" />
+                    <Grid Grid.Column="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Name="labe1" Grid.Row="0"/>
+                        <Label Name="labe2" Grid.Row="1"/>
+                        <Label Name="labe3" Grid.Row="2"/>
+                        <Border Grid.Row="3" BorderThickness="1,1,1,1"  VerticalAlignment="top" Width="166.89" HorizontalAlignment="Left" Height="31.6" >
+                            <Border.BorderBrush>
+                                <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                                    <DrawingBrush.Drawing>
+                                        <DrawingGroup>
+                                            <GeometryDrawing Brush="Red">
+                                                <GeometryDrawing.Geometry>
+                                                    <GeometryGroup>
+                                                        <RectangleGeometry Rect="0,0,50,50" />
+                                                        <RectangleGeometry Rect="50,50,50,50" />
+                                                    </GeometryGroup>
+                                                </GeometryDrawing.Geometry>
+                                            </GeometryDrawing>
+                                        </DrawingGroup>
+                                    </DrawingBrush.Drawing>
+                                </DrawingBrush>
+                            </Border.BorderBrush>
+                            <TextBlock  Name="texblock" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <Image Grid.Row="4" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\hizli-kargo-.png"/>
+                        <Label Grid.Row="5" Content="RENK :"/>
+                        <TextBlock Grid.Row="5" Text="Siyah" Background="Black" Foreground="White" Height="40" Width="40"/>
+                        <Label Grid.Row="6" Content="BEDEN"/>
+                        <TextBlock Grid.Row="6" Text="Siyah" Background="Black" Foreground="White" Height="40" Width="40" Margin="150,0,0,0"/>
+                        <TextBlock Grid.Row="6" Text="Siyah" Background="Black" Foreground="White" Height="40" Width="40" Margin="250,0,0,0"/>
+                        <TextBlock Grid.Row="6" Text="Siyah" Background="Black" Foreground="White" Height="40" Width="40" Margin="50,0,0,0"/>
+                        <TextBlock Grid.Row="6" Text="Siyah" Background="Black" Foreground="White" Height="40" Width="40" Margin="0,0,50,0"/>
+                        <TextBlock Grid.Row="6" Text="Siyah" Background="Black" Foreground="White" Height="40" Width="40" Margin="0,0,150,0"/>
+                        <Border Grid.Row="7">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <ListBox Grid.Column="0" Name="listbox">
+                                    <ListBoxItem>1</ListBoxItem>
+                                    <ListBoxItem>2</ListBoxItem>
+                                    <ListBoxItem>3</ListBoxItem>
+                                    <ListBoxItem>4</ListBoxItem>
+                                    <ListBoxItem>5</ListBoxItem>
+                                    <ListBoxItem>6</ListBoxItem>
+                                    <ListBoxItem>7</ListBoxItem>
+                                    <ListBoxItem>8</ListBoxItem>
+                                    <ListBoxItem>9</ListBoxItem>
+                                    <ListBoxItem>10</ListBoxItem>
+                                </ListBox>
+                                <Button Grid.Column="1"></Button>
+                            </Grid>
+                        </Border>
+                    </Grid>
                 </Grid>
             </Grid>
             <!-- 3.row aşağı dogru olan buton yerleri -->
