@@ -131,7 +131,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Content="Hoşgeldiniz Hüseyin Oral" VerticalAlignment="Top" HorizontalAlignment="Right" />
-                        <Button Grid.Column="1" Background="White" Content="Çıkış Yap " FontFamily="Roboto" Height="28.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Center" Style="{DynamicResource buttonbeyazgozukme}"/>
+                        <Button Grid.Column="1" Background="White" Content="Çıkış Yap " FontFamily="Roboto" Height="28.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Center" Style="{DynamicResource buttonbeyazgozukme}" Name="cikisyap" Click="cikisyap_Click"/>
                         <Button Grid.Column="2" Background="White" Content="Hesabım" FontFamily="Roboto" Height="28.8" Width="50.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Left" Style="{DynamicResource buttonbeyazgozukme}"  Click="uyegirisi_Click"/>
                     </Grid>
                 </Grid>
@@ -151,7 +151,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <!-- 0.column anasayfa butonu  -->
-                    <Button  Grid.Column="0" Name="Anasayfa"  BorderThickness="0" Click="anasayfa_Click">
+                    <Button  Grid.Column="0" Name="Anasayfa"  BorderThickness="0" Click="anasayfa_Click" >
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="White"/>
@@ -417,7 +417,8 @@
                     <RowDefinition Height="41.6"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Image Grid.Column="1" Grid.Row="0">
+                <Button Grid.Column="1" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle_MouseEnter" MouseLeave="favoriekle_MouseLeave">
+                <Image >
                     <Image.Style>
                         <Style TargetType="Image">
                             <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\onizleme\siyah-kadin-acik-ayakkabi-l0501802165-d30e.jpg"/>
@@ -429,7 +430,8 @@
                         </Style>
                     </Image.Style>
                 </Image>
-                <Button Grid.Column="1" Grid.Row="1" BorderThickness="0">
+                </Button>
+                <Button Grid.Column="1" Grid.Row="1" BorderThickness="0"  >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="White"/>
@@ -450,6 +452,28 @@
                             </Style.Triggers>
                         </Style>
                     </Button.Style>
+                </Button>
+                <Button x:Name="favoriekle" Grid.Column="1" Grid.Row="0" Height="50" Width="40"  Visibility="Hidden" MouseEnter="favoriekle_MouseEnter" MouseLeave="favoriekle_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}" Click="favoriekle_Click">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="sepeteeklee" Visibility="Hidden" Grid.Column="1" Grid.Row="0" Height="50" Width="40"  MouseEnter="favoriekle_MouseEnter" MouseLeave="favoriekle_MouseLeave" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" >
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
                 </Button>
                 <Label Grid.Row="2" Grid.Column="1" Margin="15,0,0,0" VerticalAlignment="Center">163,90 TL</Label>
                 <Border Grid.Row="3" Grid.Column="1" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="166.89" HorizontalAlignment="Left" Height="31.6" >
@@ -472,18 +496,20 @@
                     <TextBlock Text="Sepet Fiyatı: 131,12 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Border>
                 <!-- 3.column -->
-                <Image Grid.Column="3" Grid.Row="0">
-                    <Image.Style>
-                        <Style TargetType="Image">
-                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\pudra-kadin-ayakkabi-1.jpg"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\pudra-kadin-ayakkabi-l0503721009-2.jpg" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Image.Style>
-                </Image>
+                <Button Grid.Column="3" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle2_MouseEnter" MouseLeave="favoriekle2_MouseLeave" >
+                    <Image >
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\pudra-kadin-ayakkabi-1.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\pudra-kadin-ayakkabi-l0503721009-2.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
                 <Button Grid.Column="3" Grid.Row="1" BorderThickness="0">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -526,19 +552,44 @@
                     </Border.BorderBrush>
                     <TextBlock Text="Sepet Fiyatı: 55,92 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Border>
+                <Button  Grid.Column="3" Grid.Row="0" Height="50" Width="40" Name="favoriekle2" Click="favoriekle2_Click" Visibility="Hidden" MouseEnter="favoriekle2_MouseEnter" MouseLeave="favoriekle2_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}" >
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button  Visibility="Hidden" Grid.Column="3" Grid.Row="0" x:Name="sepeteeklee2" Height="50" Width="40"   Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle2_MouseEnter" MouseLeave="favoriekle2_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
                 <!-- 5.column -->
-                <Image Grid.Column="5" Grid.Row="0">
-                    <Image.Style>
-                        <Style TargetType="Image">
-                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\beyaz-kadin-sneakers-1.jpg"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\beyaz-kadin-sneakers-l0806100009-7d25.jpg" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Image.Style>
-                </Image>
+                <Button Grid.Column="5" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle3_MouseEnter" MouseLeave="favoriekle3_MouseLeave" >
+                    <Image Grid.Column="5" Grid.Row="0">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\beyaz-kadin-sneakers-1.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\beyaz-kadin-sneakers-l0806100009-7d25.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
                 <Button Grid.Column="5" Grid.Row="1" BorderThickness="0" Margin="0,0,25,0">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -581,19 +632,43 @@
                     </Border.BorderBrush>
                     <TextBlock Text="Sepet Fiyatı: 83,92 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Border>
+                <Button  Grid.Column="5" Grid.Row="0" Height="50" Width="40" Name="favoriekle3" Click="favoriekle3_Click" Visibility="Hidden" MouseEnter="favoriekle3_MouseEnter" MouseLeave="favoriekle3_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="5" x:Name="sepeteeklee3" Grid.Row="0" Height="50" Width="40"   Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle3_MouseEnter" MouseLeave="favoriekle3_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
                 <!-- 7.column -->
-                <Image Grid.Column="7" Grid.Row="0">
-                    <Image.Style>
-                        <Style TargetType="Image">
-                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\black-bayan-bot-1.jpg"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\harley-davidson-black-bot-k0777009603-1694.jpg" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Image.Style>
-                </Image>
+                <Button Grid.Column="7" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle4_MouseEnter" MouseLeave="favoriekle4_MouseLeave" >
+                    <Image Grid.Column="7" Grid.Row="0">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\black-bayan-bot-1.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\harley-davidson-black-bot-k0777009603-1694.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
                 <Button Grid.Column="7" Grid.Row="1" BorderThickness="0" Margin="0,0,55,0">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -624,6 +699,47 @@
                     <TextBlock Grid.Column="0" Margin="15,0,0,0" VerticalAlignment="Center" TextDecorations="strikethrough">629,00 TL</TextBlock>
                     <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" >347,00 TL</Label>
                 </Grid>
+                <Border Grid.Row="3" Grid.Column="7" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="145.72" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <TextBlock Text="Sepet Fiyatı: 340 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+                <Button  Grid.Column="7" Grid.Row="0" Height="50" Width="40" Name="favoriekle4" Click="favoriekle4_Click" Visibility="Hidden" MouseEnter="favoriekle4_MouseEnter" MouseLeave="favoriekle4_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="7" Grid.Row="0" Height="50" Width="40"  x:Name="sepeteeklee4" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle4_MouseEnter" MouseLeave="favoriekle4_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </Grid>
             <!-- 20.row -->
             <Grid Grid.Row="20">
@@ -644,18 +760,20 @@
                     <RowDefinition Height="41.6"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Image Grid.Column="1" Grid.Row="0">
-                    <Image.Style>
-                        <Style TargetType="Image">
-                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\sundance-bayan-bot-1.jpg"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\caterpillar-sundance-bot-k0111000101-93ec.jpg" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Image.Style>
-                </Image>
+                <Button Grid.Column="1" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle5_MouseEnter" MouseLeave="favoriekle5_MouseLeave" >
+                    <Image Grid.Column="1" Grid.Row="0">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\sundance-bayan-bot-1.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\caterpillar-sundance-bot-k0111000101-93ec.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
                 <Button Grid.Column="1" Grid.Row="1" BorderThickness="0" Margin="0,0,50,0">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -686,19 +804,62 @@
                     <TextBlock Grid.Column="0" VerticalAlignment="Center" TextDecorations="strikethrough">599,00 TL</TextBlock>
                     <Label Grid.Column="1"  VerticalAlignment="Center" HorizontalContentAlignment="Left">329,00 TL</Label>
                 </Grid>
+                <Border Grid.Row="3" Grid.Column="1" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="145.72" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <TextBlock Text="Sepet Fiyatı: 250,92 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+                <Button  Grid.Column="1" Grid.Row="0" Height="50" Width="40" Name="favoriekle5" Click="favoriekle5_Click" Visibility="Hidden" MouseEnter="favoriekle5_MouseEnter" MouseLeave="favoriekle5_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="1" Grid.Row="0" Height="50" Width="40"  x:Name="sepeteeklee5" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle5_MouseEnter" MouseLeave="favoriekle5_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
                 <!-- 3.column -->
-                <Image Grid.Column="3" Grid.Row="0">
-                    <Image.Style>
-                        <Style TargetType="Image">
-                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\chocolate-bayan-bot-1.jpg"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\caterpillar-chocolate-bot-k0111000101-c329.jpg" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Image.Style>
-                </Image>
+                <Button Grid.Column="3" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle6_MouseEnter" MouseLeave="favoriekle6_MouseLeave" >
+                    <Image Grid.Column="3" Grid.Row="0">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\chocolate-bayan-bot-1.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\caterpillar-chocolate-bot-k0111000101-c329.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
                 <Button Grid.Column="3" Grid.Row="1" BorderThickness="0" Margin="0,0,50,0">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -729,20 +890,63 @@
                     <TextBlock Grid.Column="0" VerticalAlignment="Center" TextDecorations="strikethrough" Margin="15,0,0,0">599,00 TL</TextBlock>
                     <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" >329,00 TL</Label>
                 </Grid>
-
+                <Border Grid.Row="3" Grid.Column="3" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="145.72" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <TextBlock Text="Sepet Fiyatı: 320,92 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+                <Button  Grid.Column="3" Grid.Row="0" Height="50" Width="40" Name="favoriekle6" Click="favoriekle6_Click" Visibility="Hidden" MouseEnter="favoriekle6_MouseEnter" MouseLeave="favoriekle6_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="3" Grid.Row="0" Height="50" Width="40" x:Name="sepeteeklee6"  Margin="60,0,0,0" MouseEnter="favoriekle6_MouseEnter" MouseLeave="favoriekle6_MouseLeave" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+             
                 <!-- 5.column -->
-                <Image Grid.Column="5" Grid.Row="0">
-                    <Image.Style>
-                        <Style TargetType="Image">
-                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\black-kadin-bot-k0777042303-2459.jpg"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\black-kadin-bot-k0777042303-08d9.jpg" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Image.Style>
-                </Image>
+                <Button Grid.Column="5" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle7_MouseEnter" MouseLeave="favoriekle7_MouseLeave" >
+                    <Image Grid.Column="5" Grid.Row="0">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\black-kadin-bot-k0777042303-2459.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\black-kadin-bot-k0777042303-08d9.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
                 <Button Grid.Column="5" Grid.Row="1" BorderThickness="0" Margin="0,0,75,0">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -773,20 +977,62 @@
                     <TextBlock Grid.Column="0" VerticalAlignment="Center" TextDecorations="strikethrough" Margin="15,0,0,0" >629,00 TL</TextBlock>
                     <Label Grid.Column="1"  VerticalAlignment="Center" HorizontalContentAlignment="Left" >347,00 TL</Label>
                 </Grid>
-
+                <Border Grid.Row="3" Grid.Column="5" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="145.72" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <TextBlock Text="Sepet Fiyatı: 340 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+                <Button  Grid.Column="5" Grid.Row="0" Height="50" Width="40"  Visibility="Hidden" Name="favoriekle7" Click="favoriekle7_Click" MouseEnter="favoriekle7_MouseEnter" MouseLeave="favoriekle7_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" MouseLeave="favoriekle7_MouseLeave" x:Name="sepeteeklee7" MouseEnter="favoriekle7_MouseEnter" Grid.Column="5" Grid.Row="0" Height="50" Width="40"   Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
                 <!-- 7.column -->
-                <Image Grid.Column="7" Grid.Row="0">
-                    <Image.Style>
-                        <Style TargetType="Image">
-                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-bot-k0528051003-8e40.jpg"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-bot-k0528051003-6033.jpg"/>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Image.Style>
-                </Image>
+                <Button Grid.Column="7" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle8_MouseEnter" MouseLeave="favoriekle8_MouseLeave" >
+                    <Image Grid.Column="7" Grid.Row="0">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-bot-k0528051003-8e40.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-bot-k0528051003-6033.jpg"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
                 <Button Grid.Column="7" Grid.Row="1" BorderThickness="0" Margin="0,0,65,0">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -829,6 +1075,28 @@
                     </Border.BorderBrush>
                     <TextBlock Text="Sepet Fiyatı: 83,92 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Border>
+                <Button  Grid.Column="7" Grid.Row="0" Height="50" Width="40" Name="favoriekle8" Visibility="Hidden" Click="favoriekle8_Click" MouseEnter="favoriekle8_MouseEnter" MouseLeave="favoriekle8_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="7" Grid.Row="0" Height="50" Width="40"  x:Name="sepeteeklee8" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle8_MouseEnter" MouseLeave="favoriekle8_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </Grid>
             <!-- 21.row -->
             <Grid Grid.Row="21">
@@ -849,18 +1117,20 @@
                     <RowDefinition Height="41.6"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Image Grid.Column="1" Grid.Row="0">
-                    <Image.Style>
-                        <Style TargetType="Image">
-                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\beyaz-bot-k0536410009-cf6d.jpg"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\beyaz-bot-k0536410009-b0fd.jpg" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Image.Style>
-                </Image>
+                <Button Grid.Column="1" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle9_MouseEnter" MouseLeave="favoriekle9_MouseLeave" >
+                    <Image Grid.Column="1" Grid.Row="0">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\beyaz-bot-k0536410009-cf6d.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\beyaz-bot-k0536410009-b0fd.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
                 <Button Grid.Column="1" Grid.Row="1" BorderThickness="0" Margin="0,0,60,0">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -903,19 +1173,43 @@
                     </Border.BorderBrush>
                     <TextBlock Text="Sepet Fiyatı: 61,48 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Border>
+                <Button  Grid.Column="1" Grid.Row="0" Height="50" Width="40" Name="favoriekle9" Visibility="Hidden" Click="favoriekle9_Click" MouseEnter="favoriekle9_MouseEnter" MouseLeave="favoriekle9_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="1" Grid.Row="0" Height="50" Width="40" x:Name="sepeteeklee9"  Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle9_MouseEnter" MouseLeave="favoriekle9_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
                 <!-- 3.column -->
-                <Image Grid.Column="3" Grid.Row="0">
-                    <Image.Style>
-                        <Style TargetType="Image">
-                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-cizme-k0721050509-4912.jpg"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-cizme-k0721050509-f6f0.jpg" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Image.Style>
-                </Image>
+                <Button Grid.Column="3" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle10_MouseEnter" MouseLeave="favoriekle10_MouseLeave" >
+                    <Image Grid.Column="3" Grid.Row="0">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-cizme-k0721050509-4912.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-cizme-k0721050509-f6f0.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
                 <Button Grid.Column="3" Grid.Row="1" BorderThickness="0" Margin="0,0,55,0">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -958,19 +1252,43 @@
                     </Border.BorderBrush>
                     <TextBlock Text="Sepet Fiyatı: 92,26 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Border>
+                <Button  Grid.Column="3" Grid.Row="0" Height="50" Width="40" Name="favoriekle10" Visibility="Hidden" Click="favoriekle10_Click" MouseEnter="favoriekle10_MouseEnter" MouseLeave="favoriekle10_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="3" Grid.Row="0" Height="50" Width="40"  x:Name="sepeteeklee10" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle10_MouseEnter" MouseLeave="favoriekle10_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
                 <!-- 5.column -->
-                <Image Grid.Column="5" Grid.Row="0">
-                    <Image.Style>
-                        <Style TargetType="Image">
-                            <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-bot-k0512111009-e4ca.jpg"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-bot-k0512111009-0f55.jpg" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Image.Style>
-                </Image>
+                <Button Grid.Column="5" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle11_MouseEnter" MouseLeave="favoriekle11_MouseLeave" >
+                    <Image >
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-bot-k0512111009-e4ca.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\siyah-bot-k0512111009-0f55.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
                 <Button Grid.Column="5" Grid.Row="1" BorderThickness="0" Margin="0,0,65,0">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -1013,6 +1331,28 @@
                     </Border.BorderBrush>
                     <TextBlock Text="Sepet Fiyatı: 84,97 TL!" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Border>
+                <Button  Grid.Column="5" Grid.Row="0" Height="50" Width="40" Name="favoriekle11" Visibility="Hidden" Click="favoriekle11_Click" MouseEnter="favoriekle11_MouseEnter" MouseLeave="favoriekle11_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="5" Grid.Row="0" Height="50" Width="40" x:Name="sepeteeklee11"  Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle11_MouseEnter" MouseLeave="favoriekle11_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:\Users\Hüseyin\Desktop\deneme\WpfApp1\images\sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </Grid>
             <!-- 22.row -->
             <Grid Grid.Row="22">

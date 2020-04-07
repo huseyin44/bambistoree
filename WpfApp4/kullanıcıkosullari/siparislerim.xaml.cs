@@ -29,11 +29,23 @@ namespace WpfApp4.kullanıcıkosullari
             this.WindowState = System.Windows.WindowState.Maximized;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void anasayfa_Click(object sender, RoutedEventArgs e)
         {
-            Window window = new MainWindow();
-            window.Show();
-            this.Close();
+            uyegirisi uygrs = new uyegirisi();
+            MainWindow main = new MainWindow();
+            if (main.uyeyeri44.Visibility == Visibility.Visible && main.uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+
         }
     }
 }

@@ -102,6 +102,17 @@
                         <Button Grid.Column="0" Background="White" Content="Üye Ol / " FontFamily="Roboto" Height="28.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Right" Style="{DynamicResource buttonbeyazgozukme}"/>
                         <Button Grid.Column="1" Background="White" Content="Üye Girişi" FontFamily="Roboto" Height="28.8" Width="50.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Left" Style="{DynamicResource buttonbeyazgozukme}"/>
                     </Grid>
+                    <!-- Üyegirişiyapıldıktan sonra -->
+                    <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0,0" Height="42" Visibility="Hidden"  Name="uyeyeri44">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="Hoşgeldiniz Hüseyin Oral" VerticalAlignment="Top" HorizontalAlignment="Right" />
+                        <Button Grid.Column="1" Background="White" Content="Çıkış Yap " FontFamily="Roboto" Height="28.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Center" Style="{DynamicResource buttonbeyazgozukme}" Name="cikisyap" Click="cikisyap_Click"/>
+                        <Button Grid.Column="2" Background="White" Content="Hesabım" FontFamily="Roboto" Height="28.8" Width="50.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Left" Style="{DynamicResource buttonbeyazgozukme}"  Click="uyegirisi_Click"/>
+                    </Grid>
                 </Grid>
             </Grid>
             <!-- 2.row anasayfa buton yerleri -->

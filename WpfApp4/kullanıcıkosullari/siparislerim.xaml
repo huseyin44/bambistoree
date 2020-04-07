@@ -28,7 +28,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Content="Anasayfa'ya dönmek için"/>
-                    <Button Grid.Column="1" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0" Foreground="MediumPurple" Click="Button_Click">
+                    <Button Grid.Column="1" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0" Foreground="MediumPurple" Click="anasayfa_Click">
                         <TextBlock Text="Tıklayınız" FontSize="12">
                             <TextBlock.Style>
                                 <Style TargetType="TextBlock" >

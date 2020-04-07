@@ -104,5 +104,7 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <!-- favori buton -->
+       
     </Application.Resources>
 </Application>
