@@ -55,6 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="usercontrollers\odemesecenekleri.xaml.cs">
+      <DependentUpon>odemesecenekleri.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrollers\UrunOzellikleri.xaml.cs">
+      <DependentUpon>UrunOzellikleri.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrollers\UserControlYorumlar.xaml.cs">
+      <DependentUpon>UserControlYorumlar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrollers\Useriptal.xaml.cs">
+      <DependentUpon>Useriptal.xaml</DependentUpon>
+    </Compile>
     <Page Include="kullanıcıkosullari\gizlilikguvenlik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +163,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="usercontrollers\odemesecenekleri.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="usercontrollers\UrunOzellikleri.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="usercontrollers\UserControlYorumlar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="usercontrollers\Useriptal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -264,5 +292,6 @@
   <ItemGroup>
     <Resource Include="images\hizli-kargo-.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

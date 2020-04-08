@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp4.usercontrollers;
 
 namespace WpfApp4.kullanıcıkosullari
 {
@@ -310,5 +311,34 @@ namespace WpfApp4.kullanıcıkosullari
             this.Close();
         }
 
+        private void urunozellikleri_Click(object sender, RoutedEventArgs e)
+        {
+            UrunOzellikleri user = new UrunOzellikleri();
+            griduser.Children.Clear();
+            griduser.Children.Add(user);
+            
+        }
+
+        private void odemesecenek_Click(object sender, RoutedEventArgs e)
+        {
+            odemesecenekleri user = new odemesecenekleri();
+            user.kredikartifiyati.Content = labe3.Content;
+            griduser.Children.Clear();
+            griduser.Children.Add(user);
+        }
+
+        private void yorumlar_Click(object sender, RoutedEventArgs e)
+        {
+            UserControlYorumlar user = new UserControlYorumlar();
+            griduser.Children.Clear();
+            griduser.Children.Add(user);
+        }
+
+        private void iptal44_Click(object sender, RoutedEventArgs e)
+        {
+            Useriptal user = new Useriptal();
+            griduser.Children.Clear();
+            griduser.Children.Add(user);
+        }
     }
 }

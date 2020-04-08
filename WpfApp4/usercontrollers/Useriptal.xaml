@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="WpfApp4.usercontrollers.Useriptal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp4.usercontrollers"
+             mc:Ignorable="d" 
+             d:DesignHeight="5000" d:DesignWidth="800">
+    <ScrollViewer>
+        
+            <Grid>
+                <Label Content="İPTAL VE İADE KOŞULLARI" FontSize="15"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,30,0,0">
+                    Ürünü iade etmek istediğimde ne yapmam gerekiyor?
+
+Siparişinizin size ulaştığı günü takip eden 15 gün içerisinde, ürün iadesi gerçekleştirebilirsiniz. Üründen kaynaklanan herhangi bir kusurdan dolayı yapacağınız iadelerde ise, iade süreniz 30 gündür. Ayrıca sitemizde yer alan ürünler, ilgili kampanya döneminde sınırlı sayıda stoklarla satışa sunulduğundan değişim yapılamamaktadır. Aşağıda yer alan kriterler çerçevesinde, ürün/ürünlerin iadesini sağlayabilirsiniz.
+
+ 
+
+-İade edeceğiniz ürünü, faturanızın "İade Formu" bulunan nüshasını doldurarak, paketi hasar görmemiş, ürünün kullanılmamış hali ve tüm aksesuarlarıyla birlikte, Aras  Kargo (444 25 52 )
+
+ ile karşı ödemeli olarak göndermenizi rica ederiz.
+
+ 
+
+-İadenizi gönderdikten sonra, gerekli olması halinde sizden Aras Kargo'ya ait 13 haneli gönderi kodunuz talep edilebilir. Sorun yaşamamanız adına, gönderi kodunuzu lütfen saklayınız.
+
+ 
+
+-Tek kullanımlık ürünler, hızlı bozulan veya son kullanma tarihi geçme ihtimali olan ürünlerin iadesi kabul edilmemektedir.
+
+ 
+
+-Kozmetik ve kişisel bakım ürünleri, iç giyim ürünleri, mayo, bikini, kitap, kopyalanabilir yazılım ve programlar, DVD, VCD, CD ve kasetler ile kırtasiye sarf malzemeleri ( toner, kartuş, şerit vb. ) ambalajı açılmamış, denenmemiş, bozulmamış ve kullanılmamış olmaları halinde iade edilebilir.
+
+ 
+
+İade bedeli, ürünlerin depoya ulaştığı andan itibaren, iade şartlarına uygunluğu kontrol edildikten sonra, kredi kartınıza aktarılmaktadır. Bankanıza bağlı olarak iadenizi kredi kartınızda görmeniz, birkaç gün sürebilir.
+
+ 
+
+Siparişinizde kullandığınız indirim kuponu varsa, iade işlemi esnasında hesabınıza yeniden tanımlanacaktır. Siparişinizin yapıldığı tarihte indirim kuponunda kalan kullanım süresi kadar süre, yapılacak iade işlemi ile yeniden başlayacaktır.
+
+ 
+
+İade Adresi: BMB AYAKKABI VE GIDA TİC. PAZ. SAN. İTH. VE İHR. LTD. ŞTİ. İOSB Ziya Gökalp Mah. Süleyman Demirel Bulv. İş Modern Ticaret Merkezi No:2 C Blok 13 Zemin Kat 1/1 Başakşehir
+
+ 
+
+İade etme süresi kaç gündür?
+
+Bambistore üyelerinin "Sebep Göstermeden Cayma Hakkı" 15 gündür. Mesafeli sözleşmelere dair yönetmeliğe göre kanunen 7 gün olan bu süreyi rahatça alışveriş yapabilmeniz için Bambistore 15 güne çıkartıyor.
+
+ 
+
+Hangi ürünleri iade edemiyorum?
+
+Tek kullanımlık ürünler, hızlı bozulan veya son kullanma tarihi geçme ihtimali olan ürünlerin iadesi kabul edilmemektedir. Kozmetik ve kişisel bakım ürünleri, iç giyim ürünleri, mayo, bikini, kitap, kopyalanabilir yazılım ve programlar, DVD, VCD, CD ve kasetler ile kırtasiye sarf malzemeleri (toner, kartuş, şerit vb.) ancak ambalajı açılmamış, denenmemiş, bozulmamış ve kullanılmamış olmaları halinde iade edilebilir.
+
+ 
+
+İademi hangi adrese göndereceğim?
+
+İade Adresi: BMB AYAKKABI VE GIDA TİC. PAZ. SAN. İTH. VE İHR. LTD. ŞTİ. İOSB Ziya Gökalp Mah. Süleyman Demirel Bulv. İş Modern Ticaret Merkezi No:2 C Blok 13 Zemin Kat 1/1 Başakşehir
+
+ 
+
+İadede kargo masraflarını ben mi ödeyeceğim?
+
+İade talebiyle bambistore.com.tr 'ye gönderdiğiniz tüm ürünlerin kargo masrafları firmamıza aittir. Siparişiniz ile birlikte gelen faturanın arka yüzünde mesafeli satış sözleşmesi bulunan nüshasındaki iade formunu eksiksiz doldurarak, Aras  Kargo (444 25 52 ) ile aşağıdaki adrese "Karşı Ödemeli" olarak gönderebilirsiniz
+
+ 
+
+İade Adresi: BMB AYAKKABI VE GIDA TİC. PAZ. SAN. İTH. VE İHR. LTD. ŞTİ. İOSB Ziya Gökalp Mah. Süleyman Demirel Bulv. İş Modern Ticaret Merkezi No:2 C Blok 13 Zemin Kat 1/1 Başakşehir
+
+ 
+
+İade ettiğim ürünün geri ödemesi ne zaman yapılacak?
+
+Ürünün iade şartlarına uygunluğu kontrol edildikten sonra bambistore.com.tr tarafından kredi kartınıza iade işlemi gerçekleştirilir. Bankanıza bağlı olarak, iadenizi kredi kartınızda görmeniz, bir kaç gün sürebilir. Bu süreç tamamen bankanıza bağlıdır ve bambistore.com.tr 'nin bankanıza müdahale etme hakkı yoktur.
+
+ 
+
+Elime ulaşan ürün için beden/numara değişimi yapabilir miyim?
+
+Satılan ürünlerin sınırlı sayıda stoğu olmasından dolayı değişim yapılamamaktadır. Ürünü tarafımıza gönderdiğiniz takdirde, gerekli iade süreci başlatılacaktır.
+
+ 
+
+Elime geçen ürün kusurlu. Ne yapmam gerekiyor?
+
+Ürünü iade süresi içerisinde tarafımıza göndermeniz halinde, gerekli kontroller yapılarak stoklarda bulunması durumunda ürün/ürünlerin değişimi yapılacaktır. Ürün/ürünlerin tedarikçi firma stoklarında olmaması durumunda siparişiniz iptal edilerek para iadesi işlemi gerçekleştirilecektir. İade işlemleri detayı için bkz. "Ürünü iade etmek istediğimde ne yapmam gerekiyor?"
+
+ 
+
+Tutar iadem neden taksit taksit yapılıyor?
+
+Taksitli olarak satın almış olduğunuz ürüne ait bedelin, tamamı kredi kartınıza iade edilmekte ancak bankanız tarafından iadenin kredi kartınıza geri ödemesi, taksitli olarak kartınıza yansıtılmaktadır.
+
+ 
+
+Siparişimi nasıl iptal edebilirim?
+
+İlk olarak siparişinizi ana sayfanızda yer alan Hesabım sekmesinden kontrol etmelisiniz. Eğer siparişiniz "Sipariş Hazırlanıyor " ya da "Kargoya Verildi" statüsünde değilse talebinizi ve sizlere daha iyi hizmet verebilmemiz için iptal etme sebebinizi destek@bambistore.com.tr adresine e-mail göndererek iletebilirsiniz.
+                </TextBlock>
+            </Grid>
+        </ScrollViewer>
+    
+</UserControl>

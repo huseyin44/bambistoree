@@ -37,3 +37,11 @@ C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\uye
 C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\uyegirisi.baml
 C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\urunusepeteekle.g.cs
 C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\urunusepeteekle.baml
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\UrunOzellikleri.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\UserControlYorumlar.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\UrunOzellikleri.baml
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\UserControlYorumlar.baml
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\odemesecenekleri.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\odemesecenekleri.baml
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\Useriptal.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\Useriptal.baml
