@@ -264,7 +264,7 @@ namespace WpfApp4.kullanıcıkosullari
         private void siparistakip_Click_(object sender, RoutedEventArgs e)
         {
             uyegirisi uygrs = new uyegirisi();
-            siparistakip main = new siparistakip();
+            sepeteekle main = new sepeteekle();
             if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
             {
                 main.uyeyerigrid.Visibility = Visibility.Hidden;
@@ -295,6 +295,110 @@ namespace WpfApp4.kullanıcıkosullari
             main.uyeyeri44.Visibility = Visibility.Hidden;
             main.Show();
             this.Close();
+        }
+        private void yenisezonkadin_Click(object sender, RoutedEventArgs e)
+        {
+            uyegirisi uygrs = new uyegirisi();
+            YeniSezon main = new YeniSezon();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+        }
+
+
+
+        private void yenisezonerkek_Click(object sender, RoutedEventArgs e)
+        {
+            yenisezonerkek main = new yenisezonerkek();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+        }
+
+        private void Canta_Click(object sender, RoutedEventArgs e)
+        {
+            canta main = new canta();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+        }
+
+        private void kadinbot_Click(object sender, RoutedEventArgs e)
+        {
+            kadinbot main = new kadinbot();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+        }
+
+        private void kadincizme_Click(object sender, RoutedEventArgs e)
+        {
+            kadincizme main = new kadincizme();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+        }
+
+        private void kadinsneak_Click(object sender, RoutedEventArgs e)
+        {
+            KadinSneaker main = new KadinSneaker();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
         }
     }
 }

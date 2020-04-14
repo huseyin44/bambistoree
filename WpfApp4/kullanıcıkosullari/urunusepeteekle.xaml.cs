@@ -23,8 +23,19 @@ namespace WpfApp4.kullanıcıkosullari
         public urunusepeteekle()
         {
             InitializeComponent();
-           
-            
+            MainWindow main = new MainWindow();          
+            if (main.uyeyeri44.Visibility == Visibility.Visible && main.uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                uyeyerigrid.Visibility = Visibility.Hidden;
+                uyeyeri44.Visibility = Visibility.Visible;
+
+            }
+            else
+            {
+                uyeyerigrid.Visibility = Visibility.Visible;
+                uyeyeri44.Visibility = Visibility.Hidden;
+            }
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -278,7 +289,7 @@ namespace WpfApp4.kullanıcıkosullari
         private void siparistakip_Click_(object sender, RoutedEventArgs e)
         {
             uyegirisi uygrs = new uyegirisi();
-            siparistakip main = new siparistakip();
+            sepeteekle main = new sepeteekle();
             if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
             {
                 main.uyeyerigrid.Visibility = Visibility.Hidden;
@@ -312,17 +323,16 @@ namespace WpfApp4.kullanıcıkosullari
         }
 
         private void urunozellikleri_Click(object sender, RoutedEventArgs e)
-        {
-            UrunOzellikleri user = new UrunOzellikleri();
+        {         
+            UrunOzellikleri user = new UrunOzellikleri();           
             griduser.Children.Clear();
             griduser.Children.Add(user);
-            
         }
 
         private void odemesecenek_Click(object sender, RoutedEventArgs e)
         {
             odemesecenekleri user = new odemesecenekleri();
-            user.kredikartifiyati.Content = labe3.Content;
+            user.kredikartifiyati.Content = labe3.Text;
             griduser.Children.Clear();
             griduser.Children.Add(user);
         }
@@ -339,6 +349,285 @@ namespace WpfApp4.kullanıcıkosullari
             Useriptal user = new Useriptal();
             griduser.Children.Clear();
             griduser.Children.Add(user);
+        }
+
+        private void favoriekle_Click(object sender, RoutedEventArgs e)
+        {       
+            MessageBox.Show("Ürün favorilerinize eklenmiştir.");           
+            favoriekle2.Visibility = Visibility.Visible;
+            favoriekle.Visibility = Visibility.Hidden;
+        }
+        private void favoriekle2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Ürün favorilerinizden çıkartılmıştır.");
+            favoriekle2.Visibility = Visibility.Hidden;
+            favoriekle.Visibility = Visibility.Visible;
+        }
+        private void fiyatdusunce_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Ürün fiyat alarm listenize eklendi.");
+            fiyatdusunce.Visibility = Visibility.Hidden;
+            fiyatdusunce2.Visibility = Visibility.Visible;
+        }
+        private void fiyatdusunce2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Ürün fiyat alarm listenizden çıkarıldı.");
+            fiyatdusunce.Visibility = Visibility.Visible;
+            fiyatdusunce2.Visibility = Visibility.Hidden;
+        }
+
+        private void sepeteekle_Click(object sender, RoutedEventArgs e)
+        {       
+            urunsepeteekleekrani ekran = new urunsepeteekleekrani();
+            double x = Convert.ToDouble(combobox.SelectedIndex);            
+            ekran.bambi.Content = labe1.Content;
+            ekran.isim.Content = labe2.Content;
+            ekran.fiyat2.Content = labe3.Text;
+            ekran.renk2.Content = butonrengi.Content;
+            ekran.kirmizifiyat.Content = texblock.Text;
+            ekran.image.Source = image2.Source;
+            double a = Convert.ToDouble(labe3.Text) * x;
+            double b = Convert.ToDouble(texblock.Text) * x;
+            double c = b - a;
+            ekran.borderfiyat5.Content = c.ToString();
+            ekran.borderfiyat4.Content = a.ToString();
+            ekran.borderfiyat6.Content = b.ToString();
+            ekran.indirimfiyati.Content = (c * -1).ToString();
+            ekran.combobox2.SelectedIndex = combobox.SelectedIndex;
+
+            
+            
+            if (buttonclick==true)
+            {                              
+                ekran.beden2.Content = bt1.Content;
+                buttonclick36 = false;
+                buttonclick37 = false;
+                buttonclick38 = false;
+                buttonclick39 = false;
+                buttonclick40 = false;
+                buttonclick = false;
+            }
+            else if (buttonclick36 == true)
+            {
+                ekran.beden2.Content = bt2.Content;
+                buttonclick = false;
+                buttonclick37 = false;
+                buttonclick38 = false;
+                buttonclick39 = false;
+                buttonclick40 = false;
+                buttonclick36 = false;
+            }
+            else if (buttonclick37 == true)
+            {
+                ekran.beden2.Content = bt3.Content;
+                buttonclick = false;
+                buttonclick36 = false;
+                buttonclick38 = false;
+                buttonclick39 = false;
+                buttonclick40 = false;
+                buttonclick37 = false;
+            }
+            else if (buttonclick38 == true)
+            {
+                ekran.beden2.Content = bt4.Content;
+                buttonclick = false;
+                buttonclick37 = false;
+                buttonclick36 = false;
+                buttonclick39 = false;
+                buttonclick40 = false;
+                buttonclick38 = false;
+            }
+            else if (buttonclick39 == true)
+            {
+                ekran.beden2.Content = bt5.Content;
+                buttonclick = false;
+                buttonclick37 = false;
+                buttonclick38 = false;
+                buttonclick36 = false;
+                buttonclick40 = false;
+                buttonclick39 = false;
+            }
+            else if (buttonclick40 == true)
+            {
+                ekran.beden2.Content = bt6.Content;
+                buttonclick = false;
+                buttonclick37 = false;
+                buttonclick38 = false;
+                buttonclick39 = false;
+                buttonclick36 = false;
+                buttonclick40 = false;
+            }
+            ekran.ShowDialog();
+        }
+
+        private void imageyanakaydir_Click(object sender, RoutedEventArgs e)
+        {
+            image2.Source = image0.Source;
+        }
+        private void imageyanakaydir1_Click(object sender, RoutedEventArgs e)
+        {
+            image2.Source = image1.Source;
+        }
+        private bool buttonclick = false;
+        private bool buttonclick36 = false;
+        private bool buttonclick37 = false;
+        private bool buttonclick38 = false;
+        private bool buttonclick39 = false;
+        private bool buttonclick40 = false;
+        private void bt1_Click(object sender, RoutedEventArgs e)
+        {
+            urunsepeteekleekrani ekran = new urunsepeteekleekrani();
+            bt1.Background = Brushes.Black;
+            bt1.Foreground = Brushes.White;
+            buttonclick = true;            
+        }
+        private void bt2_Click(object sender, RoutedEventArgs e)
+        {
+            urunsepeteekleekrani ekran = new urunsepeteekleekrani();
+            bt2.Background = Brushes.Black;
+            bt2.Foreground = Brushes.White;
+            buttonclick36 = true;
+        }
+        private void bt3_Click(object sender, RoutedEventArgs e)
+        {
+            urunsepeteekleekrani ekran = new urunsepeteekleekrani();
+            bt3.Background = Brushes.Black;
+            bt3.Foreground = Brushes.White;
+            buttonclick37 = true;
+        }
+        private void bt4_Click(object sender, RoutedEventArgs e)
+        {
+            urunsepeteekleekrani ekran = new urunsepeteekleekrani();
+            bt4.Background = Brushes.Black;
+            bt4.Foreground = Brushes.White;
+            buttonclick38 = true;
+        }
+        private void bt5_Click(object sender, RoutedEventArgs e)
+        {
+            urunsepeteekleekrani ekran = new urunsepeteekleekrani();
+            bt5.Background = Brushes.Black;
+            bt5.Foreground = Brushes.White;
+            buttonclick39 = true;
+        }
+        private void bt6_Click(object sender, RoutedEventArgs e)
+        {
+            urunsepeteekleekrani ekran = new urunsepeteekleekrani();
+            bt6.Background = Brushes.Black;
+            bt6.Foreground = Brushes.White;
+            buttonclick40 = true;
+        }
+        private void yenisezonkadin_Click(object sender, RoutedEventArgs e)
+        {
+            uyegirisi uygrs = new uyegirisi();
+            YeniSezon main = new YeniSezon();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+        }
+
+
+
+        private void yenisezonerkek_Click(object sender, RoutedEventArgs e)
+        {
+            yenisezonerkek main = new yenisezonerkek();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+        }
+
+        private void Canta_Click(object sender, RoutedEventArgs e)
+        {
+            canta main = new canta();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+        }
+
+        private void kadinbot_Click(object sender, RoutedEventArgs e)
+        {
+            kadinbot main = new kadinbot();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+        }
+
+        private void kadincizme_Click(object sender, RoutedEventArgs e)
+        {
+            kadincizme main = new kadincizme();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+        }
+
+        private void kadinsneak_Click(object sender, RoutedEventArgs e)
+        {
+            KadinSneaker main = new KadinSneaker();
+            if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
+            {
+                main.uyeyerigrid.Visibility = Visibility.Hidden;
+                main.uyeyeri44.Visibility = Visibility.Visible;
+                main.Show();
+                this.Close();
+            }
+            else
+            {
+                main.Show();
+                this.Close();
+            }
+        }
+
+        private void buyukımage_Click(object sender, RoutedEventArgs e)
+        {
+            resimbuyutme user = new resimbuyutme();
+            user.image444.Source = image2.Source;
+            user.ShowDialog();
+            
+
         }
     }
 }

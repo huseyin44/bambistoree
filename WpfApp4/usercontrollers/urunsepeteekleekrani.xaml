@@ -1,0 +1,223 @@
+﻿<Window x:Class="WpfApp4.usercontrollers.urunsepeteekleekrani"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4.usercontrollers"
+        mc:Ignorable="d"
+        Title="urunsepeteekleekrani" Height="450" Width="1100" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Name="grid55">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="800"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Background="White" Grid.Column="0" BorderThickness="0.5" BorderBrush="Gray" Height="400" Width="790">
+            <ScrollViewer Margin="0,7,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Name="grid1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Name="image" Width="67" Height="100" Stretch="Fill" VerticalAlignment="Top" />
+                        <Grid Grid.Column="1">
+                            <Label Name="bambi" />
+                            <Label Name="isim"  Margin="0,20,0,0" Width="auto"/>
+                            <Label Name="renk" Content="RENK :" Margin="0,40,0,0"/>
+                            <Label Name="renk2" Margin="40,40,0,0"/>
+                            <Label Name="BEDEN" Content="BEDEN :"  Margin="0,60,0,0"/>
+                            <Label Name="beden2"  Margin="50,60,0,0"/>
+                            <Label Name="kampanya" Content="KAMPANYA:" Margin="0,80,0,0"/>
+                            <Label Name="sepette" Content="Sepette İndirim: " Margin="0,100,0,0"/>
+                            <Label Name="indirimfiyati"  Margin="90,100,0,0"/>
+                        </Grid>
+                        <ComboBox Grid.Column="2" Height="40" Width="40" Name="combobox2" Margin="0,0,0,110">
+                            <ComboBoxItem>0</ComboBoxItem>
+                            <ComboBoxItem>1</ComboBoxItem>
+                            <ComboBoxItem>2</ComboBoxItem>
+                            <ComboBoxItem>3</ComboBoxItem>
+                            <ComboBoxItem>4</ComboBoxItem>
+                            <ComboBoxItem>5</ComboBoxItem>
+                            <ComboBoxItem>6</ComboBoxItem>
+                            <ComboBoxItem>7</ComboBoxItem>
+                            <ComboBoxItem>8</ComboBoxItem>
+                            <ComboBoxItem>9</ComboBoxItem>
+                            <ComboBoxItem>10</ComboBoxItem>
+                        </ComboBox>
+                        <Button Grid.Column="2" Height="20" Width="50" Margin="0,0,0,30" Name="guncelle" Click="guncelle_Click">
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="White"/>
+                                    <Setter Property="Foreground" Value="Gray"/>
+                                    <Setter Property="Content" Value="Güncelle"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="White"/>
+                                            <Setter Property="Foreground" Value="Gray"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <TextBlock Grid.Column="3"  x:Name="fiyat" HorizontalAlignment="Center" Margin="0,25,0,0"/>
+                        <Label Grid.Column="3"  Name="fiyat2" HorizontalAlignment="Center" Margin="0,30,0,0" FontSize="15"/>
+                        <Label Grid.Column="4"  Name="kirmizifiyat" Width="200" Foreground="Red" FontSize="15" HorizontalAlignment="Center" Margin="0,30,0,0"/>
+
+                    </Grid>
+                    <Grid Grid.Row="0" Visibility="Hidden" Name="grid2" Height="130">
+                        <Border Height="100" Width="700" Background="LightGray">
+                            <Label Content="Sepetinizde Ürün Bulunmamaktadır." Foreground="Gray" FontSize="17" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Label Content="Sepette %25 İndirim"/>
+                        <Label Content="Sepette %45 İndirim" Margin="0,20,0,0"/>
+                        <Label Content="Sepette 40TL İndirim" Margin="0,40,0,0"/>
+                        <Button Height="50" Width="200" Margin="0,60,550,0" Name="alisverisedevamet" Click="alisverisedevamet_Click">
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="White"/>
+                                    <Setter Property="Foreground" Value="Gray"/>
+                                    <Setter Property="Content" Value="Alışverişe Devam Et"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="0.5" >
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="IndianRed"/>
+                                            <Setter Property="Foreground" Value="White"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button Height="40" Width="80" Margin="650,0,0,100" Style="{DynamicResource butonbeyazyap}" Name="sepetemizle" Click="sepetemizle_Click">
+                            <TextBlock Text="Sepeti Temizle" TextDecorations="Underline" Foreground="Gray" >
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock" >
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                <Setter Property="Foreground" Value="IndianRed" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </Button>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </Border>
+        <Button Grid.Column="1" Height="40" Width="270" Margin="0,0,0,360">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Black"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Content" Value="Siparişi Tamamla"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Black"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Border Grid.Column="1" Height="100" Width="270" Margin="0,0,0,150" BorderBrush="Gray" BorderThickness="0.5"> 
+        <Grid>
+                <Label Content="Sipariş Tutarı" Foreground="Gray" Name="borderfiyat1" Margin="30,15,0,0"/>
+                <Label Content="Kampanya indirimi" Foreground="Gray" Name="borderfiyat2" Margin="30,30,0,0"/>
+                <Label Content="Sepet Toplamı" Foreground="Gray" Name="borderfiyat3" Margin="30,45,0,0"/>
+                <Label Foreground="Gray" Name="borderfiyat4" Margin="145,15,0,0"/>
+                <Label Foreground="Gray" Name="borderfiyat5" Margin="145,30,0,0"/>
+                <Label Name="borderfiyat6" Margin="145,45,0,0"/>
+            </Grid>
+        </Border>
+        <Border Grid.Column="1" Height="100" Width="270" Margin="0,110,0,0" BorderThickness="0.5" Background="LightGray" BorderBrush="Gray">
+            <Grid>
+                <Label Content="Hediye Çekleri" Foreground="Gray" Margin="35,15,0,0"/>
+                <TextBlock Background="White" Height="20" Width="120" Margin="0,8,64,0"/>
+                <Button Height="20" Width="50" Margin="150,5,0,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Gray"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Content" Value="Ekle"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="0.5" >
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="IndianRed"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Grid>
+        </Border>
+        <Button Grid.Column="1" Height="40" Width="270" Margin="0,300,0,0">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Black"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Content" Value="Siparişi Tamamla"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Black"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

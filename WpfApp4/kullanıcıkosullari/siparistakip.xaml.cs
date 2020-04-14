@@ -17,9 +17,9 @@ namespace WpfApp4.kullanıcıkosullari
     /// <summary>
     /// Interaction logic for siparistakip.xaml
     /// </summary>
-    public partial class siparistakip : Window
+    public partial class sepeteekle : Window
     {
-        public siparistakip()
+        public sepeteekle()
         {
             InitializeComponent();
         }
@@ -274,7 +274,7 @@ namespace WpfApp4.kullanıcıkosullari
         private void siparistakip_Click_(object sender, RoutedEventArgs e)
         {
             uyegirisi uygrs = new uyegirisi();
-            siparistakip main = new siparistakip();
+            sepeteekle main = new sepeteekle();
             if (uyeyeri44.Visibility == Visibility.Visible && uyeyerigrid.Visibility == Visibility.Hidden)
             {
                 main.uyeyerigrid.Visibility = Visibility.Hidden;

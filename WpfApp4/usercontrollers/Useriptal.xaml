@@ -6,11 +6,11 @@
              xmlns:local="clr-namespace:WpfApp4.usercontrollers"
              mc:Ignorable="d" 
              d:DesignHeight="5000" d:DesignWidth="800">
-    <ScrollViewer>
+    <ScrollViewer Height="200">
         
             <Grid>
                 <Label Content="İPTAL VE İADE KOŞULLARI" FontSize="15"/>
-                <TextBlock TextWrapping="Wrap" Margin="0,30,0,0">
+                <TextBlock TextWrapping="WrapWithOverflow" Margin="0,30,0,0">
                     Ürünü iade etmek istediğimde ne yapmam gerekiyor?
 
 Siparişinizin size ulaştığı günü takip eden 15 gün içerisinde, ürün iadesi gerçekleştirebilirsiniz. Üründen kaynaklanan herhangi bir kusurdan dolayı yapacağınız iadelerde ise, iade süreniz 30 gündür. Ayrıca sitemizde yer alan ürünler, ilgili kampanya döneminde sınırlı sayıda stoklarla satışa sunulduğundan değişim yapılamamaktadır. Aşağıda yer alan kriterler çerçevesinde, ürün/ürünlerin iadesini sağlayabilirsiniz.

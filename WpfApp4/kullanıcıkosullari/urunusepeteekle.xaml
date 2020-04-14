@@ -21,7 +21,7 @@
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
             <!-- 0.row -->
-            <Image Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\kargo_bedav.jpg"/>
+            <Image Stretch="Fill" Source="/images/icon/kargo_bedav.jpg"/>
             <!-- 1.row -->
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -36,12 +36,12 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\truck.png " Height="12" Width="13"/>
+                        <Image Grid.Column="0" Stretch="Fill" Source="/images/icon/truck.png " Height="12" Width="13"/>
                         <Label Content="Sipariş Takibi" VerticalAlignment="Top" Height="37" FontFamily="Roboto" FontSize="13" Grid.ColumnSpan="2" Margin="137,0,-0.2,-10.6"  />
                     </Grid>
                 </Button>
                 <Button Grid.Column="1" Style="{DynamicResource butonbeyazyap}" Click="anasayfa_Click">
-                    <Image Height="60" Width="160" Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\bambistore-logo (1).png" />
+                    <Image Height="60" Width="160" Stretch="Fill" Source="/images/icon/bambistore-logo (1).png" />
                 </Button>
                 <!-- 1row 2column-->
                 <Grid Grid.Column="2">
@@ -56,7 +56,7 @@
                     </Grid.RowDefinitions>
                     <!-- aramabutonu -->
                     <Button Grid.Column="0" Grid.Row="1" Background="White" BorderThickness="0,0,0,0" Name="arama" Height="30" Width="16.725" Margin="154,0,0,00" Click="arama_Click" Style="{DynamicResource buttonbeyazgozukme}">
-                        <Image Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\search.png" />
+                        <Image Stretch="Fill" Source="/images/icon/search.png" />
                     </Button>
                     <!-- aramatextboxu -->
                     <Border Grid.Row="2" Grid.ColumnSpan="2" Visibility="Hidden"  Name="aramaborderi" Height="43" Width="360" BorderThickness="1" BorderBrush="LightGray" >
@@ -73,7 +73,7 @@
                     <Button Grid.Column="1" Grid.Row="1" Background="White" BorderThickness="0" Width="154" Height="26.4" FontSize="12" Margin="0,0,85,0" Style="{DynamicResource sepetim}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Click="alisverissepetim_Click" >
                         <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Label Content="Sepetim" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                            <Image Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\shopping-bag.png " Height="24" Width="24"/>
+                            <Image Stretch="Fill" Source="/images/icon/shopping-bag.png " Height="24" Width="24"/>
                             <Label Content="0 / 0,00TL" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
                         </DockPanel>
                     </Button>
@@ -100,7 +100,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Button Grid.Column="0" Background="White" Content="Üye Ol / " FontFamily="Roboto" Height="28.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Right" Style="{DynamicResource buttonbeyazgozukme}"/>
-                        <Button Grid.Column="1" Background="White" Content="Üye Girişi" FontFamily="Roboto" Height="28.8" Width="50.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Left" Style="{DynamicResource buttonbeyazgozukme}"/>
+                        <Button Grid.Column="1" Background="White" Content="Üye Girişi" FontFamily="Roboto" Height="28.8" Width="50.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Left" Style="{DynamicResource buttonbeyazgozukme}" Click="uyegirisi_Click"/>
                     </Grid>
                     <!-- Üyegirişiyapıldıktan sonra -->
                     <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0,0" Height="42" Visibility="Hidden"  Name="uyeyeri44">
@@ -154,7 +154,7 @@
                         </Button.Style>
                     </Button>
                     <!-- 1.column erkek butonu  -->
-                    <Button Grid.Column="1" BorderThickness="0" Name="erkekbut" MouseEnter="erkekbut_MouseEnter" MouseLeave="erkekbut_MouseLeave_1" >
+                    <Button Grid.Column="1" BorderThickness="0" Name="erkekbut" Click="yenisezonerkek_Click" MouseEnter="erkekbut_MouseEnter" MouseLeave="erkekbut_MouseLeave_1" >
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="White"/>
@@ -178,7 +178,7 @@
                         </Button.Style>
                     </Button>
                     <!-- 2.column canta butonu  -->
-                    <Button Grid.Column="2" Name="Canta" BorderThickness="0" >
+                    <Button Grid.Column="2" Name="Canta" BorderThickness="0" Click="Canta_Click">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="White"/>
@@ -202,7 +202,7 @@
                         </Button.Style>
                     </Button>
                     <!-- 3.column kadın butonu  -->
-                    <Button Grid.Column="3" Name="Kadın" BorderThickness="0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave">
+                    <Button Grid.Column="3" Name="Kadın" BorderThickness="0" Click="yenisezonkadin_Click" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="White"/>
@@ -233,7 +233,7 @@
                     <RowDefinition Height="50"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" Content="Önceki Sayfaya Dön" Width="130" Margin="1280,5,0,0" FontSize="14"/>
+                <Button Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" Content="Önceki Sayfaya Dön" Width="130" Margin="1280,5,0,0" FontSize="14" Click="anasayfa_Click"/>
 
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
@@ -244,18 +244,18 @@
                         <ColumnDefinition Width="560"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <ScrollViewer Grid.Column="1" >
+                    <ScrollViewer Grid.Column="1">
                         <Grid>
-                    <Button Style="{DynamicResource buttonbeyazgozukme}"  Height="150" Width="100" VerticalAlignment="Top" Margin="0,10,0,0">
-                    <Image  Name="image0" Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\88237097_1105580523118695_9054300385336505773_n.jpg"/>
+                    <Button Style="{DynamicResource buttonbeyazgozukme}"  Height="150" Width="100" VerticalAlignment="Top" Margin="0,10,0,0" Name="imageyanakaydir" Click="imageyanakaydir_Click">
+                    <Image  Name="image0" Stretch="Fill" />
                     </Button>
-                    <Button Style="{DynamicResource buttonbeyazgozukme}" Height="150" Width="100" Margin="0,0,0,400">
-                    <Image  Name="image1" Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\88237097_1105580523118695_9054300385336505773_n.jpg" />
+                            <Button Style="{DynamicResource buttonbeyazgozukme}" Height="150" Width="100" Margin="0,0,0,400" Name="imageyanakaydir1" Click="imageyanakaydir1_Click">
+                                <Image  Name="image1" Stretch="Fill"  />
                             </Button>
                         </Grid>
                     </ScrollViewer>
-                    <Button Grid.Column="2" Style="{DynamicResource buttonbeyazgozukme}" Height="650" Width="420" Margin="0,0,0,280">
-                    <Image  Name="image2" Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\88237097_1105580523118695_9054300385336505773_n.jpg" />
+                    <Button Grid.Column="2" Style="{DynamicResource buttonbeyazgozukme}" Height="650" Width="420" Margin="0,0,0,280" Name="buyukımage" Click="buyukımage_Click">
+                    <Image  Name="image2" Stretch="Fill"  />
                     </Button>
                         <Grid Grid.Column="4">
                         <Grid.RowDefinitions>
@@ -271,9 +271,9 @@
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
-                        <Label Name="labe1" Grid.Row="0" Content="AAAAA"/>
-                        <Label Name="labe2" Grid.Row="1" Content="BBBBB"/>
-                        <Label Name="labe3" Grid.Row="2" Content="CCCCCC"/>
+                        <Label Name="labe1" Grid.Row="0" />
+                        <Label Name="labe2" Grid.Row="1" />
+                        <TextBlock Name="labe3" Grid.Row="2"/>
                         <Border Grid.Row="3" BorderThickness="1,1,1,1"  VerticalAlignment="top" Width="166.89" HorizontalAlignment="Left" Height="31.6" Margin="10,5,0,0" >
                             <Border.BorderBrush>
                                 <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
@@ -293,23 +293,24 @@
                             </Border.BorderBrush>
                             <TextBlock  Name="texblock" Foreground="Red" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <Image Grid.Row="4" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\hizli-kargo-.png" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                        <Image Grid.Row="4" Source="/images/hizli-kargo-.png" HorizontalAlignment="Left" Margin="15,0,0,0"/>
                         <Label Grid.Row="5" Content="RENK :" VerticalContentAlignment="Center"/>
-                        <Button Grid.Row="5" Content="Siyah" Style="{DynamicResource siyahbuton}" Height="30" Width="40" Margin="0,0,400,0" />
-                        <Label Grid.Row="6" Content="BEDEN" VerticalContentAlignment="Center"/>
-                        <Button Grid.Row="6" Content="35" Height="40" Width="20" Margin="0,0,400,0" Style="{DynamicResource bedenbuton}"/>
-                        <Button Grid.Row="6" Content="36" Height="40" Width="20" Margin="0,0,270,0" Style="{DynamicResource bedenbuton}"/>
-                        <Button Grid.Row="6" Content="37" Height="40" Width="20" Margin="0,0,140,0" Style="{DynamicResource bedenbuton}"/>
-                        <Button Grid.Row="6" Content="38" Height="40" Width="20" Margin="0,0,10,0"  Style="{DynamicResource bedenbuton}"/>
-                        <Button Grid.Row="6" Content="39" Height="40" Width="20" Margin="120,0,0,0" Style="{DynamicResource bedenbuton}"/>
-                        <Button Grid.Row="6" Content="40" Height="40" Width="20" Margin="250,0,0,0" Style="{DynamicResource bedenbuton}"/>
+                        <Button Grid.Row="5"  Style="{DynamicResource siyahbuton}" Height="30" Width="90" Name="butonrengi" Margin="0,0,350,0" />
+                        <Label Grid.Row="6" Content="BEDEN" VerticalContentAlignment="Center" Name="borderbeden"/>
+                        <Button Grid.Row="6" x:Name="bt1" Content="35" Height="40" Width="20" Margin="0,0,400,0" Style="{DynamicResource bedenbuton}" Click="bt1_Click"/>
+                        <Button Grid.Row="6" x:Name="bt2" Content="36" Height="40" Width="20" Margin="0,0,270,0" Style="{DynamicResource bedenbuton}" Click="bt2_Click"/>
+                        <Button Grid.Row="6" x:Name="bt3" Content="37" Height="40" Width="20" Margin="0,0,140,0" Style="{DynamicResource bedenbuton}" Click="bt3_Click"/>
+                        <Button Grid.Row="6" x:Name="bt4" Content="38" Height="40" Width="20" Margin="0,0,10,0"  Style="{DynamicResource bedenbuton}" Click="bt4_Click"/>
+                        <Button Grid.Row="6" x:Name="bt5" Content="39" Height="40" Width="20" Margin="120,0,0,0" Style="{DynamicResource bedenbuton}" Click="bt5_Click"/>
+                        <Button Grid.Row="6" x:Name="bt6" Content="40" Height="40" Width="20" Margin="250,0,0,0" Style="{DynamicResource bedenbuton}" Click="bt6_Click"/>
                         <Border Grid.Row="7" BorderThickness="0,1,0,1" BorderBrush="Gray">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/>
                                     <ColumnDefinition Width="480"/>
                                 </Grid.ColumnDefinitions>
-                                <ComboBox Grid.Column="0" Name="listbox" Height="40" Width="40" VerticalAlignment="Center" >
+                                <ComboBox Grid.Column="0" Name="combobox" Height="40" Width="40" VerticalAlignment="Center"   >
+                                    <ComboBoxItem>0</ComboBoxItem>
                                     <ComboBoxItem>1</ComboBoxItem>
                                     <ComboBoxItem>2</ComboBoxItem>
                                     <ComboBoxItem>3</ComboBoxItem>
@@ -321,7 +322,7 @@
                                     <ComboBoxItem>9</ComboBoxItem>
                                     <ComboBoxItem>10</ComboBoxItem>
                                 </ComboBox>
-                                <Button Grid.Column="1" Content="SEPETE EKLE" Style="{DynamicResource pembesepeteekle}" Height="45" Width="100" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Button>
+                                <Button Grid.Column="1" Content="SEPETE EKLE" Name="sepeteekle" Click="sepeteekle_Click" Style="{DynamicResource pembesepeteekle}" Height="45" Width="100" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Button>
                             </Grid>
                         </Border>
                         <Grid Grid.Row="8">
@@ -331,9 +332,13 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition Width="200"/>
                             </Grid.ColumnDefinitions>
-                            <Button Grid.Column="0" Content="FAVORİLERE EKLE" Style="{DynamicResource saributon}"></Button>
-                            <Button Grid.Column="1" Style="{DynamicResource saributon}">
-                                <TextBlock Text="Fiyatı Düşünce Haber Ver" TextWrapping="Wrap" FontSize="14"></TextBlock>
+                            <Button Grid.Column="0" Content="FAVORİLERE EKLE" Style="{DynamicResource saributon}" Name="favoriekle" Visibility="Visible" Click="favoriekle_Click"></Button>
+                            <Button Grid.Column="0" Content="FAVORİLERE EKLE" Style="{DynamicResource saributon}" Name="favoriekle2" Visibility="Hidden" Click="favoriekle2_Click"></Button>
+                            <Button Grid.Column="1" Style="{DynamicResource saributon}" Name="fiyatdusunce" Click="fiyatdusunce_Click">
+                                <TextBlock Text="Fiyatı Düşünce Haber Ver" TextWrapping="Wrap" FontSize="14" ></TextBlock>
+                            </Button>
+                            <Button Grid.Column="1" Style="{DynamicResource saributon}" Name="fiyatdusunce2" Visibility="Hidden" Click="fiyatdusunce2_Click">
+                                <TextBlock Text="Fiyatı Alarm Listemden Çıkart" TextWrapping="Wrap" FontSize="14" ></TextBlock>
                             </Button>
                             <Button Grid.Column="2" Style="{DynamicResource saributon}">
                                 <TextBlock Text="Ücretsiz                   Kargo" TextWrapping="Wrap" FontSize="14"></TextBlock>
@@ -392,7 +397,7 @@
                             <RowDefinition/>
                             <RowDefinition Height="35"/>
                         </Grid.RowDefinitions>
-                        <Button Grid.Row="1" Width="110" Content="Erkek Ayakkabı" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="65,0,0,0"  MouseEnter="erkekbut_MouseEnter" MouseLeave="erkekbut_MouseLeave_1"/>
+                        <Button Grid.Row="1" Width="110" Content="Erkek Bot" Click="yenisezonerkek_Click" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="65,0,0,0"  MouseEnter="erkekbut_MouseEnter" MouseLeave="erkekbut_MouseLeave_1"/>
                     </Grid>
                     <Grid Grid.Column="3" Visibility="Hidden" x:Name="kadinkategori" >
                         <Grid.RowDefinitions>
@@ -407,19 +412,16 @@
                             <RowDefinition/>
                             <RowDefinition Height="35"/>
                         </Grid.RowDefinitions>
-                        <Button Grid.Row="1" Width="110" Content="Kadın Bot" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
-                        <Button Grid.Row="2" Width="110" Content="     Kadın Ayakkabı" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
+                        <Button Grid.Row="1" Width="110" Content="Kadın Bot" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Name="kadinbot" Click="kadinbot_Click"/>
+                        <Button Grid.Row="2" Width="110" Content="     Kadın Ayakkabı" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Click="kadinsneak_Click"/>
                         <Button Grid.Row="3" Width="110" Content="   Kadın Loafer" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" />
-                        <Button Grid.Row="4" Width="110" Content="  Kadın Çizme" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
-                        <Button Grid.Row="5" Width="110" Content="     Kadın Sneakers" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
-                        <Button Grid.Row="6" Width="110" Content=" Kadın Spor" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
-                        <Button Grid.Row="7" Width="110" Content="  Kadın Babet" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
-                        <Button Grid.Row="8" Width="110" Content="   Kadın Comfort" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
+                        <Button Grid.Row="4" Width="110" Content="  Kadın Çizme" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Name="kadincizme" Click="kadincizme_Click"/>
+                        <Button Grid.Row="5" Width="110" Content="     Kadın Sneakers" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Name="kadinsneak" Click="kadinsneak_Click"/>
                     </Grid>
                 </Grid>
             </Grid>
             <!-- 23.row -->
-            <Image  Grid.Row="4" Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\footer_bilgiler.jpg" ></Image>
+            <Image  Grid.Row="4" Stretch="Fill" Source="/images/icon/footer_bilgiler.jpg" ></Image>
             <!-- 24.row -->
             <Border Grid.Row="5" BorderThickness="1,1,1,1">
                 <Grid>
@@ -451,7 +453,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" VerticalAlignment="Center" Height="20" Margin="15,0,0,0" Text="E-posta adresinizi yazın..."/>
-                        <Image Grid.Column="1" HorizontalAlignment="Left" Height="20" Width="60" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\mail.png"/>
+                        <Image Grid.Column="1" HorizontalAlignment="Left" Height="20" Width="60" Source="/images/icon/mail.png"/>
                     </Grid>
                     <Grid Grid.RowSpan="3" Grid.Column="2">
                         <Grid.ColumnDefinitions>
@@ -467,7 +469,7 @@
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
                         <Button Grid.Column="0" Height="33" Margin="0,10,0,0" Name="facebook" Click="facebook_Click">
-                            <Image Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\facebook.png">
+                            <Image Source="/images/icon/facebook.png">
                             </Image>
                             <Button.Style>
                                 <Style TargetType="{x:Type Button}">
@@ -490,7 +492,7 @@
                             </Button.Style>
                         </Button>
                         <Button Grid.Column="2" Height="33" Margin="0,10,0,0"  Click="Twitter_Click">
-                            <Image Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\twitter.png">
+                            <Image Source="/images/icon/twitter.png">
                             </Image>
                             <Button.Style>
                                 <Style TargetType="{x:Type Button}">
@@ -513,7 +515,7 @@
                             </Button.Style>
                         </Button>
                         <Button Grid.Column="4" Height="33" Margin="0,10,0,0" Name="instagram" Click="instagram_Click" >
-                            <Image Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\instagram.png">
+                            <Image Source="/images/icon/instagram.png">
                             </Image>
                             <Button.Style>
                                 <Style TargetType="{x:Type Button}">
@@ -536,7 +538,7 @@
                             </Button.Style>
                         </Button>
                         <Button Grid.Column="6" Height="33" Margin="0,10,0,0" Click="Button_Click_2">
-                            <Image Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\pinterest.png">
+                            <Image Source="/images/icon/pinterest.png">
                             </Image>
                             <Button.Style>
                                 <Style TargetType="{x:Type Button}">
@@ -559,7 +561,7 @@
                             </Button.Style>
                         </Button>
                         <Button Grid.Column="8" Height="33" Margin="0,10,0,0" Click="Button_Click_2">
-                            <Image Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\google-plus.png">
+                            <Image Source="/images/icon/google-plus.png">
                             </Image>
                             <Button.Style>
                                 <Style TargetType="{x:Type Button}">
@@ -771,7 +773,7 @@
                             </Grid.RowDefinitions>
                             <TextBlock Text="MOBİL UYGULAMALAR" Grid.Row="0" VerticalAlignment="Center" FontSize="15"></TextBlock>
                             <Button  Grid.Row="1" Click="Button_Click_2">
-                                <Image Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\apple_uygulama.png" Height="38" Width="134" VerticalAlignment="Top"></Image>
+                                <Image Stretch="Fill" Source="/images/icon/apple_uygulama.png" Height="38" Width="134" VerticalAlignment="Top"></Image>
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="White"/>
@@ -793,7 +795,7 @@
                                 </Button.Style>
                             </Button>
                             <Button Grid.Column="4" Grid.Row="3" Click="Button_Click_2">
-                                <Image Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\android_uygulama.png" Height="38" Width="134" ></Image>
+                                <Image Stretch="Fill" Source="/images/icon/android_uygulama.png" Height="38" Width="134" ></Image>
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="White"/>
@@ -832,7 +834,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label Height="25.2" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Content="© 2016 - Tüm Hakları Saklıdır." />
-                    <Image Grid.Column="1" Width="66"  Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\Kart.jpg"/>
+                    <Image Grid.Column="1" Width="66"  Source="/images/icon/Kart.jpg"/>
                     <Grid Grid.Column="2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>

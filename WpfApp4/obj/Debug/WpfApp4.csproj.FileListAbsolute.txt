@@ -1,47 +1,65 @@
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\bin\Debug\WpfApp4.exe.config
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\bin\Debug\WpfApp4.exe
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\bin\Debug\WpfApp4.pdb
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\WpfApp4.csprojAssemblyReference.cache
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\MainWindow.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\App.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\WpfApp4_MarkupCompile.cache
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\WpfApp4_MarkupCompile.lref
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\MainWindow.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\WpfApp4.g.resources
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\WpfApp4.Properties.Resources.resources
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\WpfApp4.csproj.GenerateResource.cache
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\WpfApp4.exe
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\WpfApp4.pdb
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\App.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\gizlilikguvenlik.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\guvenlialisveris.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\hakkimizda.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\iletisim.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\iptalveiade.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\islemrehberi.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\Page1.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\sepetim.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\siparislerim.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\gizlilikguvenlik.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\guvenlialisveris.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\hakkimizda.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\iletisim.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\iptalveiade.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\islemrehberi.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\Page1.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\sepetim.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\siparislerim.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\siparistakip.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\siparistakip.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\uyegirisi.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\uyegirisi.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\urunusepeteekle.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\kullanıcıkosullari\urunusepeteekle.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\UrunOzellikleri.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\UserControlYorumlar.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\UrunOzellikleri.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\UserControlYorumlar.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\odemesecenekleri.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\odemesecenekleri.baml
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\Useriptal.g.cs
-C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\obj\Debug\usercontrollers\Useriptal.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\bin\Debug\WpfApp4.exe.config
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\bin\Debug\WpfApp4.exe
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\bin\Debug\WpfApp4.pdb
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\WpfApp4.csprojAssemblyReference.cache
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\canta.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\gizlilikguvenlik.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\guvenlialisveris.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\hakkimizda.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\iletisim.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\iptalveiade.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\islemrehberi.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\kadinbot.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\kadincizme.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\KadinSneaker.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\Page1.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\sepetim.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\siparislerim.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\siparistakip.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\urunusepeteekle.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\uyegirisi.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\uyeol.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\YeniSezon.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\yenisezonerkek.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\MainWindow.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\odemesecenekleri.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\resimbuyutme.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\UrunOzellikleri.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\urunsepeteekleekrani.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\UserControlYorumlar.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\Useriptal.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\App.g.cs
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\WpfApp4_MarkupCompile.cache
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\WpfApp4_MarkupCompile.lref
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\App.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\canta.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\gizlilikguvenlik.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\guvenlialisveris.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\hakkimizda.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\iletisim.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\iptalveiade.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\islemrehberi.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\kadinbot.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\kadincizme.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\KadinSneaker.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\Page1.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\sepetim.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\siparislerim.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\siparistakip.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\urunusepeteekle.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\uyegirisi.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\uyeol.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\YeniSezon.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\kullanıcıkosullari\yenisezonerkek.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\MainWindow.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\odemesecenekleri.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\resimbuyutme.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\UrunOzellikleri.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\urunsepeteekleekrani.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\UserControlYorumlar.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\usercontrollers\Useriptal.baml
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\WpfApp4.g.resources
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\WpfApp4.Properties.Resources.resources
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\WpfApp4.csproj.GenerateResource.cache
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\WpfApp4.exe
+C:\Users\Hüseyin\Desktop\bambistoree wpf\WpfApp4\obj\Debug\WpfApp4.pdb

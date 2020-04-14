@@ -23,6 +23,8 @@ namespace WpfApp4.usercontrollers
         public UrunOzellikleri()
         {
             InitializeComponent();
+         
         }
+        
     }
 }

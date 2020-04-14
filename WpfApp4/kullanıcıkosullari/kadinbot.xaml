@@ -1,0 +1,1867 @@
+﻿<Window x:Class="WpfApp4.kullanıcıkosullari.kadinbot"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4.kullanıcıkosullari"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded_1"
+        Title="kadinbot" Height="5000" Width="1500">
+    <ScrollViewer Name="scrollviewer">
+        <Grid Height="6400" Width="1519">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="544"/>
+                <RowDefinition Height="544"/>
+                <RowDefinition Height="544"/>
+                <RowDefinition Height="106"/>
+                <RowDefinition Height="217"/>
+                <RowDefinition Height="162"/>
+                <RowDefinition Height="61.2"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <!-- 0.row -->
+            <Image Stretch="Fill" Source="/images/icon/kargo_bedav.jpg"/>
+            <!-- 1.row -->
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <!-- SiparişTakibi -->
+                <Button Grid.Column="0" Height="26.4"  Background="White" BorderThickness="0" VerticalAlignment="Stretch" Style="{DynamicResource buttonbeyazgozukme}" Click="siparistakip_Click_">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Stretch="Fill" Source="/images/icon/truck.png " Height="12" Width="13"/>
+                        <Label Content="Sipariş Takibi" VerticalAlignment="Top" Height="37" FontFamily="Roboto" FontSize="13" Margin="138,0,151.4,-10.6" Grid.ColumnSpan="2" />
+                    </Grid>
+                </Button>
+                <Button Grid.Column="1" Style="{DynamicResource butonbeyazyap}" Click="anasayfa_Click">
+                    <Image Height="60" Width="160" Stretch="Fill" Source="/images/icon/bambistore-logo (1).png" />
+                </Button>
+                <!-- 1row 2column-->
+                <Grid Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <!-- aramabutonu -->
+                    <Button Grid.Column="0" Grid.Row="1" Background="White" BorderThickness="0,0,0,0" Name="arama" Height="30" Width="16.725" Margin="154,0,0,00" Click="arama_Click" Style="{DynamicResource buttonbeyazgozukme}">
+                        <Image Stretch="Fill" Source="/images/icon/search.png" />
+                    </Button>
+                    <!-- aramatextboxu -->
+                    <Border Grid.Row="2" Grid.ColumnSpan="2" Visibility="Hidden"  Name="aramaborderi" Height="43" Width="360" BorderThickness="1" BorderBrush="LightGray" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Style="{DynamicResource aramatexbox}" Grid.Column="0"  BorderThickness="0"></TextBox>
+                            <Button x:Name="ara" Grid.Column="1" Height="43" Width="40"  Content="ARA"  VerticalAlignment="Bottom" BorderBrush="Black" BorderThickness="1" Style="{DynamicResource buttonbeyazgozukme}"/>
+                        </Grid>
+                    </Border>
+                    <!-- Sepetim -->
+                    <Button Grid.Column="1" Grid.Row="1" Background="White" BorderThickness="0" Width="154" Height="26.4" FontSize="12" Margin="0,0,85,0" Style="{DynamicResource sepetim}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Click="alisverissepetim_Click">
+                        <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label Content="Sepetim" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                            <Image Stretch="Fill" Source="/images/icon/shopping-bag.png " Height="24" Width="24"/>
+                            <Label Content="0 / 0,00TL" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                        </DockPanel>
+                    </Button>
+                    <Border Grid.Row="2" Grid.ColumnSpan="2" Name="sepetimborder" Height="63" Width="310" BorderThickness="1" BorderBrush="LightGray" Visibility="Hidden">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="205"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Content="Sepetinizde ürün bulunmamaktadır" Foreground="LightGray"/>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="40"/>
+                                </Grid.RowDefinitions>
+                                <Button Content="SATIN AL" Grid.Row="1" HorizontalAlignment="Left" Width="90"  Style="{DynamicResource sepetim}" Click="alisverissepetim_Click"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                    <!-- ÜyeYerleri -->
+                    <Grid Grid.Row="2" Grid.Column="2" Margin="0,0,0,0" Height="28.8" Width="99.95" x:Name="uyeyerigrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Background="White" Content="Üye Ol / " FontFamily="Roboto" Height="28.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Right" Style="{DynamicResource buttonbeyazgozukme}" Click="Button_Click_1"/>
+                        <Button Grid.Column="1" Background="White" Content="Üye Girişi" FontFamily="Roboto" Height="28.8" Width="50.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Left" Style="{DynamicResource buttonbeyazgozukme}" Name="uyegirisi" Click="uyegirisi_Click"/>
+                    </Grid>
+                    <!-- Üyegirişiyapıldıktan sonra -->
+                    <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0,0" Height="42" Visibility="Hidden"  Name="uyeyeri44">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="Hoşgeldiniz Hüseyin Oral" VerticalAlignment="Top" HorizontalAlignment="Right" />
+                        <Button Grid.Column="1" Background="White" Content="Çıkış Yap " FontFamily="Roboto" Height="28.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Center" Style="{DynamicResource buttonbeyazgozukme}" Name="cikisyap" Click="cikisyap_Click"/>
+                        <Button Grid.Column="2" Background="White" Content="Hesabım" FontFamily="Roboto" Height="28.8" Width="50.8" BorderThickness="0" FontSize="12" HorizontalAlignment="Left" Style="{DynamicResource buttonbeyazgozukme}"  Click="uyegirisi_Click"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <!-- 2.row anasayfa buton yerleri -->
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <!-- 0.column anasayfa butonu  -->
+                    <Button  Grid.Column="0" Name="Anasayfa"  BorderThickness="0" Click="anasayfa_Click" >
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="Content" Value="Anasayfa"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Black"/>
+                                        <Setter Property="Foreground" Value="White"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <!-- 1.column erkek butonu  -->
+                    <Button Grid.Column="1" BorderThickness="0" Name="erkekbut" MouseEnter="erkekbut_MouseEnter" MouseLeave="erkekbut_MouseLeave_1" Click="yenisezonerkek_Click" >
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="Content" Value="Erkek"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Black"/>
+                                        <Setter Property="Foreground" Value="White"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <!-- 2.column canta butonu  -->
+                    <Button Grid.Column="2" Name="Canta" BorderThickness="0" Click="Canta_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="Content" Value="Çanta"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Black"/>
+                                        <Setter Property="Foreground" Value="White"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <!-- 3.column kadın butonu  -->
+                    <Button Grid.Column="3" Name="Kadın" BorderThickness="0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Click="yenisezonkadin_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="Content" Value="Kadın"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Black"/>
+                                        <Setter Property="Foreground" Value="White"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </Grid>
+            </Grid>
+            <!-- 3.row aşağı dogru olan buton yerleri -->
+            <Grid Height="310" Grid.Row="3" VerticalAlignment="Top"  Name="kategorigrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="650"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1" Visibility="Hidden" x:Name="erkekkategori">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1"/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="1" Width="110" Content="Erkek Bot" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="65,0,0,0"  MouseEnter="erkekbut_MouseEnter" MouseLeave="erkekbut_MouseLeave_1" Click="yenisezonerkek_Click"/>
+                    </Grid>
+                    <Grid Grid.Column="3" Visibility="Hidden" x:Name="kadinkategori" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1"/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="1" Width="110" Content="Kadın Bot" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"  Click="kadinbot_Click"/>
+                        <Button Grid.Row="2" Width="110" Content="     Kadın Ayakkabı" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Click="kadinsneak_Click"/>
+                        <Button Grid.Row="3" Width="110" Content="   Kadın Loafer" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" />
+                        <Button Grid.Row="4" Width="110" Content="  Kadın Çizme" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Name="kadincizme" Click="kadincizme_Click"/>
+                        <Button Grid.Row="5" Width="110" Content="     Kadın Sneakers" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Name="kadinsneak" Click="kadinsneak_Click"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <!-- 4.row ozellik ayarlama yerleri -->
+            <Grid  Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Button Height="25" Content="Anasayfa" Width="90" Style="{DynamicResource gributon}" Margin="0,0,1200,25"></Button>
+                    <Label Content=">" Margin="200,38,0,0" Foreground="Gray"/>
+                    <Button Height="25" Content="Kadın" Width="90" Style="{DynamicResource gributon}" Margin="0,0,1000,25"></Button>
+                    <Label Content=">" Margin="290,38,0,0" Foreground="Gray"/>
+                    <Button Height="25" Content="Yeni Sezon" Width="90" Style="{DynamicResource gributon}" Margin="0,0,800,25"></Button>
+                    <ComboBox Height="30" Width="100" Margin="0,50,1150,0" BorderBrush="Gray" Background="White" SelectedIndex="0">
+                        <ComboBoxItem>Renk</ComboBoxItem>
+                        <ComboBoxItem>Beyaz/Lame</ComboBoxItem>
+                        <ComboBoxItem>Siyah</ComboBoxItem>
+                        <ComboBoxItem>Gri</ComboBoxItem>
+                        <ComboBoxItem>Lacivert</ComboBoxItem>
+                        <ComboBoxItem>Dore</ComboBoxItem>
+                        <ComboBoxItem>Pudra</ComboBoxItem>
+                        <ComboBoxItem>Altın</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Height="30" Width="100" Margin="0,50,750,0" BorderBrush="Gray" Background="White" SelectedIndex="0">
+                        <ComboBoxItem>Beden</ComboBoxItem>
+                        <ComboBoxItem>35</ComboBoxItem>
+                        <ComboBoxItem>36</ComboBoxItem>
+                        <ComboBoxItem>37</ComboBoxItem>
+                        <ComboBoxItem>38</ComboBoxItem>
+                        <ComboBoxItem>39</ComboBoxItem>
+                        <ComboBoxItem>40</ComboBoxItem>
+                    </ComboBox>
+                    <Slider Width="200" Margin="0,50,300,0" Name="slider" ValueChanged="slider_ValueChanged"></Slider>
+                    <Label Name="sliderlabel" Content="20 TL - 500 TL"  Margin="550,74,0,0"></Label>
+                </Grid>
+                <Border Grid.Row="1" Height="70" Width="1240" BorderBrush="Gray" BorderThickness="1">
+                    <Grid>
+                        <ComboBox Height="30" Width="150" Margin="0,0,1070,0" BorderBrush="Gray" Background="White" SelectedIndex="0">
+                            <ComboBoxItem>Sıralam Seçiniz</ComboBoxItem>
+                            <ComboBoxItem>Fiyata Göre (artan)</ComboBoxItem>
+                            <ComboBoxItem>Fiyata Göre (azalan)</ComboBoxItem>
+                            <ComboBoxItem>Ürün Adına Göre (A>Z)</ComboBoxItem>
+                            <ComboBoxItem>Ürün Adına Göre (Z>A)</ComboBoxItem>
+                        </ComboBox>
+                        <Button  Style="{DynamicResource gributon}" Height="50" Width="80"  Margin="0,0,800,0" Name="stoktakiler" Click="stoktakiler_Click"  >
+                            <TextBlock Text="Stoktakiler" Grid.Row="1" FontSize="15" >
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock" >
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </Button>
+                        <Label Content="11 Ürün Bulundu" Foreground="Gray" FontSize="15" Margin="300,0,0,0" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+            </Grid>
+
+
+            <!-- 19.row -->
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition Width="32.6"/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition Width="32.6"/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition Width="32.6"/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="402"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="41.6"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Button Grid.Column="1" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle_MouseEnter" MouseLeave="favoriekle_MouseLeave">
+                    <Image Name="image444">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="/images/olive-bayan-bot-k0777032103-f68c - Kopya.jpg" x:Name="image0"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="/images/olive-bot-k0777032103-9379 - Kopya.jpg" x:Name="image1" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
+                <Button Grid.Column="1" Grid.Row="1" BorderThickness="0" Name="siyahkadinayakkabi" >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Content" Value="OLİVE BAYAN BOT K0777032103                        "/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button x:Name="favoriekle" Grid.Column="1" Grid.Row="0" Height="50" Width="40"  Visibility="Hidden" MouseEnter="favoriekle_MouseEnter" MouseLeave="favoriekle_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}" Click="favoriekle_Click">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="sepeteeklee" Visibility="Hidden" Grid.Column="1" Grid.Row="0" Height="50" Width="40"  MouseEnter="favoriekle_MouseEnter" MouseLeave="favoriekle_MouseLeave" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" Click="sepeteeklee_Click">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Label Grid.Row="2" Grid.Column="1" Margin="15,0,0,0" VerticalAlignment="Center" Name="label1">403,90</Label>
+                <Border Grid.Row="3" Grid.Column="1" BorderThickness="1,1,1,1"  VerticalAlignment="top" Width="166.89" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Sepet Fiyatı:  " Foreground="Red" FontSize="13"  VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" x:Name="sepetfiyati1" Text="382,12" Foreground="Red" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <!-- 3.column -->
+                <Button Grid.Column="3" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle2_MouseEnter" MouseLeave="favoriekle2_MouseLeave" >
+                    <Image x:Name="image445">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="/images/dark-olive-bot-k0111118401-6d00 - Kopya.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="/images/caterpillar-dark-olive-bot-k0111118401-3965 - Kopya.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
+                <Button Grid.Column="3" Grid.Row="1" BorderThickness="0" Margin="0,0,45,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Content" Value="DARK OLIVE BAYAN BOT K0111118401"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Label Grid.Row="2" Grid.Column="3" Margin="15,0,0,0" VerticalAlignment="Center" Name="label2">219,90</Label>
+                <Border Grid.Row="3" Grid.Column="3" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="166.89" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Sepet Fiyatı:  " Foreground="Red" FontSize="13"  VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" x:Name="sepetfiyati2" Text="155,92" Foreground="Red" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Button  Grid.Column="3" Grid.Row="0" Height="50" Width="40" Name="favoriekle2" Click="favoriekle2_Click" Visibility="Hidden" MouseEnter="favoriekle2_MouseEnter" MouseLeave="favoriekle2_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}" >
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button  Visibility="Hidden" Grid.Column="3" Grid.Row="0" x:Name="sepeteeklee2" Height="50" Width="40" Click="sepeteeklee2_Click"  Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle2_MouseEnter" MouseLeave="favoriekle2_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <!-- 5.column -->
+                <Button Grid.Column="5" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle3_MouseEnter" MouseLeave="favoriekle3_MouseLeave" >
+                    <Image Grid.Column="5" Grid.Row="0" x:Name="image446" >
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="/images/d24c90b0-1906-44e5-b687-2074fef1536e - Kopya.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="/images/adc19515-23f4-413a-bcbb-b811023b3fa6 - Kopya.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
+                <Button Grid.Column="5" Grid.Row="1" BorderThickness="0" Margin="0,0,25,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Content" Value="BEYAZ KADIN BOT L0806100009          "/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Label Grid.Row="2" Grid.Column="5" Margin="15,0,0,0" VerticalAlignment="Center" Name="label3">104,90</Label>
+                <Border Grid.Row="3" Grid.Column="5" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="166.89" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Sepet Fiyatı:  " Foreground="Red" FontSize="13"  VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" x:Name="sepetfiyati3" Text="83,92" Foreground="Red" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Button  Grid.Column="5" Grid.Row="0" Height="50" Width="40" Name="favoriekle3" Click="favoriekle3_Click" Visibility="Hidden" MouseEnter="favoriekle3_MouseEnter" MouseLeave="favoriekle3_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="5" x:Name="sepeteeklee3" Click="sepeteeklee3_Click" Grid.Row="0" Height="50" Width="40"   Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle3_MouseEnter" MouseLeave="favoriekle3_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <!-- 7.column -->
+                <Button Grid.Column="7" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle4_MouseEnter" MouseLeave="favoriekle4_MouseLeave" >
+                    <Image Grid.Column="7" Grid.Row="0" x:Name="image447">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="/images/black-bayan-bot-1.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="/images/harley-davidson-black-bot-k0777009603-1694.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
+                <Button Grid.Column="7" Grid.Row="1" BorderThickness="0" Margin="0,0,55,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Content" Value="BLACK BAYAN BOT K0777009603"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Grid Grid.Row="2" Grid.Column="7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Margin="15,0,0,0" VerticalAlignment="Center" TextDecorations="strikethrough">629.00 TL</TextBlock>
+                    <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Name="label4">347.00</Label>
+                </Grid>
+                <Border Grid.Row="3" Grid.Column="7" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="145.72" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Sepet Fiyatı:  " Foreground="Red" FontSize="13"  VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" x:Name="sepetfiyati4" Text="340" Foreground="Red" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Button  Grid.Column="7" Grid.Row="0" Height="50" Width="40" Name="favoriekle4" Click="favoriekle4_Click" Visibility="Hidden" MouseEnter="favoriekle4_MouseEnter" MouseLeave="favoriekle4_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Click="sepeteeklee4_Click" Grid.Column="7" Grid.Row="0" Height="50" Width="40"  x:Name="sepeteeklee4" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle4_MouseEnter" MouseLeave="favoriekle4_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+            <!-- 20.row -->
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition Width="32.6"/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition Width="32.6"/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition Width="32.6"/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="402"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="41.6"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Button Grid.Column="1" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle5_MouseEnter" MouseLeave="favoriekle5_MouseLeave" Click="sepeteeklee5_Click">
+                    <Image Grid.Column="1" Grid.Row="0" x:Name="image448">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="/images/sundance-bayan-bot-1.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="/images/caterpillar-sundance-bot-k0111000101-93ec.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
+                <Button Grid.Column="1" Grid.Row="1" BorderThickness="0" Margin="0,0,50,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Content" Value="SUNDANCE BAYAN BOT K0111000101"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" VerticalAlignment="Center" TextDecorations="strikethrough">599,00 TL</TextBlock>
+                    <Label Grid.Column="1"  VerticalAlignment="Center" HorizontalContentAlignment="Left" Name="label5">329,00</Label>
+                </Grid>
+                <Border Grid.Row="3" Grid.Column="1" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="145.72" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Sepet Fiyatı:  " Foreground="Red" FontSize="13"  VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" x:Name="sepetfiyati5" Text="250,92" Foreground="Red" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Button  Grid.Column="1" Grid.Row="0" Height="50" Width="40" Name="favoriekle5" Click="favoriekle5_Click" Visibility="Hidden" MouseEnter="favoriekle5_MouseEnter" MouseLeave="favoriekle5_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="1" Grid.Row="0" Height="50" Width="40" Click="sepeteeklee5_Click" x:Name="sepeteeklee5" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle5_MouseEnter" MouseLeave="favoriekle5_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <!-- 3.column -->
+                <Button Grid.Column="3" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle6_MouseEnter" MouseLeave="favoriekle6_MouseLeave" >
+                    <Image Grid.Column="3" Grid.Row="0" x:Name="image449">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="/images/rose-bot-d0189007739-0bea.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="/images/rose-bot-d0189007739-cdc3.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
+                <Button Grid.Column="3" Grid.Row="1" BorderThickness="0" Margin="0,0,60,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Content" Value="ROSE KADIN BOT D0189007739    "/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Grid Grid.Row="2" Grid.Column="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" VerticalAlignment="Center" TextDecorations="strikethrough" Margin="15,0,0,0">199,00 TL</TextBlock>
+                    <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Name="label6">129,00</Label>
+                </Grid>
+                <Border Grid.Row="3" Grid.Column="3" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="145.72" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Sepet Fiyatı:  " Foreground="Red" FontSize="13"  VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" x:Name="sepetfiyati6" Text="80,92" Foreground="Red" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Button  Grid.Column="3" Grid.Row="0" Height="50" Width="40" Name="favoriekle6" Click="favoriekle6_Click" Visibility="Hidden" MouseEnter="favoriekle6_MouseEnter" MouseLeave="favoriekle6_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="3" Grid.Row="0" Height="50" Width="40" Click="sepeteeklee6_Click" x:Name="sepeteeklee6"  Margin="60,0,0,0" MouseEnter="favoriekle6_MouseEnter" MouseLeave="favoriekle6_MouseLeave" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <!-- 5.column -->
+                <Button Grid.Column="5" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle7_MouseEnter" MouseLeave="favoriekle7_MouseLeave" >
+                    <Image Grid.Column="5" Grid.Row="0" x:Name="image450">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="/images/black-kadin-bot-k0777042303-2459.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="/images/black-kadin-bot-k0777042303-08d9.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
+                <Button Grid.Column="5" Grid.Row="1" BorderThickness="0" Margin="0,0,75,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Content" Value="BLACK BAYAN BOT K0777042303"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Grid Grid.Row="2" Grid.Column="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" VerticalAlignment="Center" TextDecorations="strikethrough" Margin="15,0,0,0" >629,00 TL</TextBlock>
+                    <Label Grid.Column="1"  VerticalAlignment="Center" HorizontalContentAlignment="Left" Name="label7">347,00</Label>
+                </Grid>
+                <Border Grid.Row="3" Grid.Column="5" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="145.72" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Sepet Fiyatı:  " Foreground="Red" FontSize="13"  VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" x:Name="sepetfiyati7" Text="340" Foreground="Red" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Button  Grid.Column="5" Grid.Row="0" Height="50" Width="40"  Visibility="Hidden" Name="favoriekle7" Click="favoriekle7_Click" MouseEnter="favoriekle7_MouseEnter" MouseLeave="favoriekle7_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" MouseLeave="favoriekle7_MouseLeave" Click="sepeteeklee7_Click" x:Name="sepeteeklee7" MouseEnter="favoriekle7_MouseEnter" Grid.Column="5" Grid.Row="0" Height="50" Width="40"   Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <!-- 7.column -->
+                <Button Grid.Column="7" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle8_MouseEnter" MouseLeave="favoriekle8_MouseLeave" >
+                    <Image Grid.Column="7" Grid.Row="0">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="/images/siyah-bot-k0528051003-8e40.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="/images/siyah-bot-k0528051003-6033.jpg"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
+                <Button Grid.Column="7" Grid.Row="1" BorderThickness="0" Margin="0,0,65,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Content" Value="SIYAH KADIN BOT K0528051003"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Label Grid.Row="2" Grid.Column="7" Margin="15,0,0,0" VerticalAlignment="Center" Name="label8">179,90</Label>
+                <Border Grid.Row="3" Grid.Column="7" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="145.72" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Sepet Fiyatı:  " Foreground="Red" FontSize="13"  VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" x:Name="sepetfiyati8" Text="83,92" Foreground="Red" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Button  Grid.Column="7" Grid.Row="0" Height="50" Width="40" Name="favoriekle8" Visibility="Hidden" Click="favoriekle8_Click" MouseEnter="favoriekle8_MouseEnter" MouseLeave="favoriekle8_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="7" Grid.Row="0" Height="50" Width="40"  Click="sepeteeklee8_Click" x:Name="sepeteeklee8" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle8_MouseEnter" MouseLeave="favoriekle8_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+            <!-- 21.row -->
+            <Grid Grid.Row="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition Width="32.6"/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition Width="32.6"/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition Width="32.6"/>
+                    <ColumnDefinition Width="268"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="402"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="41.6"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Button Grid.Column="1" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle9_MouseEnter" MouseLeave="favoriekle9_MouseLeave" >
+                    <Image Grid.Column="1" Grid.Row="0" x:Name="image451">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="/images/beyaz-bot-k0536410009-cf6d.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="/images/beyaz-bot-k0536410009-b0fd.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
+                <Button Grid.Column="1" Grid.Row="1" BorderThickness="0" Margin="0,0,60,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Content" Value="BEYAZ KADIN BOT K0536410009"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Label Grid.Row="2" Grid.Column="1" Margin="15,0,0,0" VerticalAlignment="Center" Name="label9">75,90</Label>
+                <Border Grid.Row="3" Grid.Column="1" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="166.89" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Sepet Fiyatı:  " Foreground="Red" FontSize="13"  VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" x:Name="sepetfiyati9" Text="61,48" Foreground="Red" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Button  Grid.Column="1" Grid.Row="0" Height="50" Width="40" Name="favoriekle9" Visibility="Hidden" Click="favoriekle9_Click" MouseEnter="favoriekle9_MouseEnter" MouseLeave="favoriekle9_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="1" Grid.Row="0" Height="50" Width="40" Click="sepeteeklee9_Click" x:Name="sepeteeklee9"  Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle9_MouseEnter" MouseLeave="favoriekle9_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <!-- 3.column -->
+                <Button Grid.Column="3" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle10_MouseEnter" MouseLeave="favoriekle10_MouseLeave" >
+                    <Image Grid.Column="3" Grid.Row="0" x:Name="image452">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="/images/olive-bayan-bot-k0777052503-9c0f.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="/images/olive-bayan-bot-k0777052503-a9c3.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
+                <Button Grid.Column="3" Grid.Row="1" BorderThickness="0" Margin="0,0,55,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Content" Value="OLİVE BAYAN BOT K0777052503  "/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Label Grid.Row="2" Grid.Column="3" Margin="15,0,0,0" VerticalAlignment="Center" Name="label10">113,90</Label>
+                <Border Grid.Row="3" Grid.Column="3" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="166.89" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Sepet Fiyatı:  " Foreground="Red" FontSize="13"  VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" x:Name="sepetfiyati10" Text="92,26" Foreground="Red" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Button  Grid.Column="3" Grid.Row="0" Height="50" Width="40" Name="favoriekle10" Visibility="Hidden" Click="favoriekle10_Click" MouseEnter="favoriekle10_MouseEnter" MouseLeave="favoriekle10_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="3" Grid.Row="0" Height="50" Width="40" Click="sepeteeklee10_Click"  x:Name="sepeteeklee10" Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle10_MouseEnter" MouseLeave="favoriekle10_MouseLeave">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <!-- 5.column -->
+                <Button Grid.Column="5" Grid.Row="0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle11_MouseEnter" MouseLeave="favoriekle11_MouseLeave" >
+                    <Image x:Name="image453" >
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" Value="/images/siyah-bot-k0512111009-e4ca.jpg"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Source" Value="/images/siyah-bot-k0512111009-0f55.jpg" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
+                <Button Grid.Column="5" Grid.Row="1" BorderThickness="0" Margin="0,0,65,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Content" Value="SIYAH KADIN BOT K0512111009"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Label Grid.Row="2" Grid.Column="5" Margin="15,0,0,0" VerticalAlignment="Center" Name="label11">104,90</Label>
+                <Border Grid.Row="3" Grid.Column="5" BorderThickness="1,1,1,1" VerticalAlignment="top" Width="166.89" HorizontalAlignment="Left" Height="31.6" >
+                    <Border.BorderBrush>
+                        <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="Red">
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Border.BorderBrush>
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Sepet Fiyatı:  "  Foreground="Red" FontSize="13"  VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" x:Name="sepetfiyati11" Text="84,97" Foreground="Red" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Button  Grid.Column="5" Grid.Row="0" Height="50" Width="40" Name="favoriekle11" Visibility="Hidden" Click="favoriekle11_Click" MouseEnter="favoriekle11_MouseEnter" MouseLeave="favoriekle11_MouseLeave" Margin="0,0,60,0" Style="{DynamicResource buttonbeyazgozukme}">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/heart.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Visibility="Hidden" Grid.Column="5" Grid.Row="0" Height="50" Width="40" x:Name="sepeteeklee11"  Margin="60,0,0,0" Style="{DynamicResource buttonbeyazgozukme}" MouseEnter="favoriekle11_MouseEnter" MouseLeave="favoriekle11_MouseLeave" Click="sepeteeklee11_Click">
+                    <Grid>
+                        <Ellipse Width="40" Height="40" Fill="White"/>
+                        <Image Height="30" Source="C:/Users/Hüseyin/Desktop/deneme/WpfApp1/images/sepetimBg.png"/>
+                    </Grid>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+            <!-- 23.row -->
+            <Image  Grid.Row="7" Stretch="Fill" Source="/images/icon/footer_bilgiler.jpg" ></Image>
+            <!-- 24.row -->
+            <Border Grid.Row="8" BorderThickness="1,1,1,1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="54"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="585"/>
+                        <ColumnDefinition Width="585"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="1" Grid.Column="1" Content="E-BÜLTEN ABONELİK" FontSize="13" Margin="20,0,0,0"/>
+                    <Grid Grid.Row="3" Grid.Column="1" Width="555">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Content="İndirimlerimizden ve kampanyalarımızdan güncel olarak haberdar olmak ve takip almak" FontSize="13"/>
+                        <Label Grid.Row="1" Content="istiyorsanız e-bültenimize üye olabilirsiniz." FontSize="13"/>
+                    </Grid>
+                    <Grid Grid.Row="4" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" VerticalAlignment="Center" Height="20" Margin="15,0,0,0" Text="E-posta adresinizi yazın..."/>
+                        <Image Grid.Column="1" HorizontalAlignment="Left" Height="20" Width="60" Source="/images/icon/mail.png"/>
+                    </Grid>
+                    <Grid Grid.RowSpan="3" Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Height="33" Margin="0,10,0,0" Name="facebook" Click="facebook_Click">
+                            <Image Source="/images/icon/facebook.png">
+                            </Image>
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="White"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="1">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="true">
+                                            <Setter Property="Background" Value="Blue"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button Grid.Column="2" Height="33" Margin="0,10,0,0" Name="twitter" Click="Twitter_Click">
+                            <Image Source="/images/icon/twitter.png">
+                            </Image>
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="White"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="1">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="true">
+                                            <Setter Property="Background" Value="DeepSkyBlue"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button Grid.Column="4" Height="33" Margin="0,10,0,0" Name="instagram" Click="instagram_Click" >
+                            <Image Source="/images/icon/instagram.png">
+                            </Image>
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="White"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="1">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="true">
+                                            <Setter Property="Background" Value="SteelBlue"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button Grid.Column="6" Height="33" Margin="0,10,0,0" Click="Button_Click_2">
+                            <Image Source="/images/icon/pinterest.png">
+                            </Image>
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="White"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="1">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="true">
+                                            <Setter Property="Background" Value="Red"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button Grid.Column="8" Height="33" Margin="0,10,0,0" Click="Button_Click_2">
+                            <Image Source="/images/icon/google-plus.png">
+                            </Image>
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="White"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="1">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="true">
+                                            <Setter Property="Background" Value="Red"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Border>
+            <!-- 25.row -->
+            <Grid  Grid.Row="9">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="1170"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <!-- 25.row  1.column-->
+                <Border Grid.Column="1" BorderThickness="0,1,0,1" BorderBrush="Gray">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="234"/>
+                            <ColumnDefinition Width="15"/>
+                            <ColumnDefinition Width="234"/>
+                            <ColumnDefinition Width="15"/>
+                            <ColumnDefinition Width="234"/>
+                            <ColumnDefinition Width="15"/>
+                            <ColumnDefinition Width="234"/>
+                            <ColumnDefinition Width="22"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45.2"/>
+                                <RowDefinition Height="33.6"/>
+                                <RowDefinition Height="33.6"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Kurumsal" Grid.Row="0" VerticalAlignment="Center" FontSize="15"></TextBlock>
+                            <Button Grid.Row="1" Style="{DynamicResource butonbeyazyap}" Name="kullanımsart" Click="kullanımsart_Click" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <TextBlock Text="Kullanım Şartları" Grid.Row="1" FontSize="13" >
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+
+                            </Button>
+                            <Button Grid.Row="2" Style="{DynamicResource butonbeyazyap}" HorizontalAlignment="Left" x:Name="iletisim" Click="iletisim_Click" VerticalAlignment="Center">
+                                <TextBlock Text="İletişim"  FontSize="12">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Button>
+                        </Grid>
+
+                        <!-- 25.row  2.column-->
+                        <Grid Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45.2"/>
+                                <RowDefinition Height="33.6"/>
+                                <RowDefinition Height="33.6"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="SÖZLEŞMELER" Grid.Row="0" VerticalAlignment="Center" FontSize="15"></TextBlock>
+                            <Button Grid.Row="1" Style="{DynamicResource butonbeyazyap}" Name="hakkimizda" HorizontalAlignment="Left" VerticalAlignment="Center" Click="hakkimizda_Click">
+                                <TextBlock Text="HAKKIMIZDA"  FontSize="13">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Button>
+                            <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Name="gizlilikguven" Style="{DynamicResource butonbeyazyap}" Click="gizlilikguven_Click">
+                                <TextBlock Text="GİZLİLİK GÜVENLİK" Grid.Row="2" FontSize="12">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Button>
+                        </Grid>
+                        <!-- 25.row  4.column-->
+                        <Grid Grid.Column="4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45.2"/>
+                                <RowDefinition Height="33.6"/>
+                                <RowDefinition Height="33.6"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="YARDIM" Grid.Row="0" VerticalAlignment="Center" FontSize="15"></TextBlock>
+                            <Button Grid.Row="1" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="iptaliadekosul" Click="iptaliadekosul_Click">
+                                <TextBlock Text="İPTAL VE İADE KOŞULLARI" Grid.Row="1" FontSize="13">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Button>
+                            <Button Grid.Row="2" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="islemrehberi" Click="islemrehberi_Click">
+                                <TextBlock Text="İŞLEM REHBERİ" Grid.Row="2" FontSize="12">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Button>
+                        </Grid>
+                        <!-- 25.row  6.column-->
+                        <Grid Grid.Column="6">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45.2"/>
+                                <RowDefinition Height="33.6"/>
+                                <RowDefinition Height="33.6"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="ALIŞVERİŞ BİLGİLERİM" Grid.Row="0" VerticalAlignment="Center" FontSize="15"></TextBlock>
+                            <Button Grid.Row="1" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="siparislerim" Click="siparislerim_Click">
+                                <TextBlock Text="SİPARİŞLERİM" Grid.Row="1" FontSize="13">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Button>
+                            <Button Grid.Row="2" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="alisverissepetim" Click="alisverissepetim_Click">
+                                <TextBlock Text="ALIŞVERİŞ SEPETİM" Grid.Row="2" FontSize="12">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Button>
+                            <Button Grid.Row="3" Style="{DynamicResource butonbeyazyap}" VerticalAlignment="Center" HorizontalAlignment="Left" Name="guvenlialisveris" Click="guvenlialisveris_Click">
+                                <TextBlock Text="GÜVENLİ ALIŞVERİŞ" Grid.Row="3" FontSize="12" VerticalAlignment="Top">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Button>
+                        </Grid>
+                        <!-- 25.row  8.column-->
+                        <Grid Grid.Column="8">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45.2"/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="MOBİL UYGULAMALAR" Grid.Row="0" VerticalAlignment="Center" FontSize="15"></TextBlock>
+                            <Button  Grid.Row="1" Click="Button_Click_2">
+                                <Image Stretch="Fill" Source="/images/icon/apple_uygulama.png" Height="38" Width="134" VerticalAlignment="Top"></Image>
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Background" Value="White"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                    <Border Background="{TemplateBinding Background}"  BorderThickness="0">
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="true">
+                                                <Setter Property="Background" Value="White"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                            <Button Grid.Column="4" Grid.Row="3" Click="Button_Click_2">
+                                <Image Stretch="Fill" Source="/images/icon/android_uygulama.png" Height="38" Width="134" ></Image>
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Background" Value="White"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                    <Border Background="{TemplateBinding Background}" BorderThickness="0">
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="true">
+                                                <Setter Property="Background" Value="White"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+            <!-- 26.row -->
+            <Grid Grid.Row="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="1170"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Height="25.2" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Content="© 2016 - Tüm Hakları Saklıdır." />
+                    <Image Grid.Column="1" Width="66"  Source="/images/icon/Kart.jpg"/>
+                    <Grid Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="47"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalAlignment="Center" HorizontalContentAlignment="Right" Height="25" Content="Bu Site Ticimax"/>
+                        <Button Grid.Column="1" Content="E-Ticaret" Foreground="Gray" Click="Button_Click" Name="eticaret">
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="White"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}"  BorderThickness="0">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="true">
+                                            <Setter Property="Background" Value="White"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Label Grid.Column="2" VerticalAlignment="Center" HorizontalContentAlignment="Left" Height="25" Content="yazılımı ile hazırlanmıştır."/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <!-- 27.row -->
+            <Grid Grid.Row="11">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="1170"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="47"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Height="25.2" Width="170" VerticalAlignment="Center"  Grid.Column="0" Margin="415,0,0,0" Content="Bu site Ticimax® Gelişmiş" />
+                    <Button Grid.Column="1" Content="E-Ticaret" Foreground="Blue" Click="Button_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}"  BorderThickness="0">
+                                                <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Background" Value="White"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Label Grid.Column="2" VerticalAlignment="Center" HorizontalContentAlignment="Left" Height="25" Content="sistemleri ile hazırlanmıştır."/>
+                </Grid>
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
+</Window>

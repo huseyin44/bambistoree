@@ -21,7 +21,7 @@
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
             <!-- 0.row -->
-            <Image Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\kargo_bedav.jpg"/>
+            <Image Stretch="Fill" Source="/images/icon/kargo_bedav.jpg"/>
             <!-- 1.row -->
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -36,12 +36,12 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\truck.png " Height="12" Width="13"/>
+                        <Image Grid.Column="0" Stretch="Fill" Source="/images/icon/truck.png " Height="12" Width="13"/>
                         <Label Content="Sipariş Takibi" VerticalAlignment="Top" Height="37" FontFamily="Roboto" FontSize="13" Grid.ColumnSpan="2" Margin="137,0,-0.2,-10.6"  />
                     </Grid>
                 </Button>
                 <Button Grid.Column="1" Style="{DynamicResource butonbeyazyap}" Click="anasayfa_Click">
-                    <Image Height="60" Width="160" Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\bambistore-logo (1).png" />
+                    <Image Height="60" Width="160" Stretch="Fill" Source="/images/icon/bambistore-logo (1).png" />
                 </Button>
                 <!-- 1row 2column-->
                 <Grid Grid.Column="2">
@@ -56,7 +56,7 @@
                     </Grid.RowDefinitions>
                     <!-- aramabutonu -->
                     <Button Grid.Column="0" Grid.Row="1" Background="White" BorderThickness="0,0,0,0" Name="arama" Height="30" Width="16.725" Margin="154,0,0,00" Click="arama_Click" Style="{DynamicResource buttonbeyazgozukme}">
-                        <Image Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\search.png" />
+                        <Image Stretch="Fill" Source="/images/icon/search.png" />
                     </Button>
                     <!-- aramatextboxu -->
                     <Border Grid.Row="2" Grid.ColumnSpan="2" Visibility="Hidden"  Name="aramaborderi" Height="43" Width="360" BorderThickness="1" BorderBrush="LightGray" >
@@ -73,7 +73,7 @@
                     <Button Grid.Column="1" Grid.Row="1" Background="White" BorderThickness="0" Width="154" Height="26.4" FontSize="12" Margin="0,0,85,0" Style="{DynamicResource sepetim}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Click="alisverissepetim_Click">
                         <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Label Content="Sepetim" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                            <Image Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\shopping-bag.png " Height="24" Width="24"/>
+                            <Image Stretch="Fill" Source="/images/icon/shopping-bag.png " Height="24" Width="24"/>
                             <Label Content="0 / 0,00TL" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
                         </DockPanel>
                     </Button>
@@ -154,7 +154,7 @@
                         </Button.Style>
                     </Button>
                     <!-- 1.column erkek butonu  -->
-                    <Button Grid.Column="1" BorderThickness="0" Name="erkekbut" MouseEnter="erkekbut_MouseEnter" MouseLeave="erkekbut_MouseLeave_1" >
+                    <Button Grid.Column="1" BorderThickness="0" Name="erkekbut" MouseEnter="erkekbut_MouseEnter" MouseLeave="erkekbut_MouseLeave_1" Click="yenisezonerkek_Click" >
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="White"/>
@@ -178,7 +178,7 @@
                         </Button.Style>
                     </Button>
                     <!-- 2.column canta butonu  -->
-                    <Button Grid.Column="2" Name="Canta" BorderThickness="0" >
+                    <Button Grid.Column="2" Name="Canta" BorderThickness="0"  Click="Canta_Click">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="White"/>
@@ -202,7 +202,7 @@
                         </Button.Style>
                     </Button>
                     <!-- 3.column kadın butonu  -->
-                    <Button Grid.Column="3" Name="Kadın" BorderThickness="0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave">
+                    <Button Grid.Column="3" Name="Kadın" BorderThickness="0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Click="yenisezonkadin_Click">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="White"/>
@@ -289,7 +289,7 @@
                             <RowDefinition/>
                             <RowDefinition Height="35"/>
                         </Grid.RowDefinitions>
-                        <Button Grid.Row="1" Width="110" Content="Erkek Ayakkabı" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="65,0,0,0"  MouseEnter="erkekbut_MouseEnter" MouseLeave="erkekbut_MouseLeave_1"/>
+                        <Button Grid.Row="1" Width="110" Content="Erkek Bot" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="65,0,0,0"  MouseEnter="erkekbut_MouseEnter" MouseLeave="erkekbut_MouseLeave_1" Click="yenisezonerkek_Click"/>
                     </Grid>
                     <Grid Grid.Column="3" Visibility="Hidden" x:Name="kadinkategori" >
                         <Grid.RowDefinitions>
@@ -304,19 +304,16 @@
                             <RowDefinition/>
                             <RowDefinition Height="35"/>
                         </Grid.RowDefinitions>
-                        <Button Grid.Row="1" Width="110" Content="Kadın Bot" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
-                        <Button Grid.Row="2" Width="110" Content="     Kadın Ayakkabı" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
+                        <Button Grid.Row="1" Width="110" Content="Kadın Bot" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Name="kadinbot" Click="kadinbot_Click"/>
+                        <Button Grid.Row="2" Width="110" Content="     Kadın Ayakkabı" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Click="kadinsneak_Click"/>
                         <Button Grid.Row="3" Width="110" Content="   Kadın Loafer" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" />
-                        <Button Grid.Row="4" Width="110" Content="  Kadın Çizme" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
-                        <Button Grid.Row="5" Width="110" Content="     Kadın Sneakers" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
-                        <Button Grid.Row="6" Width="110" Content=" Kadın Spor" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
-                        <Button Grid.Row="7" Width="110" Content="  Kadın Babet" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
-                        <Button Grid.Row="8" Width="110" Content="   Kadın Comfort" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave"/>
+                        <Button Grid.Row="4" Width="110" Content="  Kadın Çizme" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Name="kadincizme" Click="kadincizme_Click"/>
+                        <Button Grid.Row="5" Width="110" Content="     Kadın Sneakers" Style="{DynamicResource butonkategori}" Background="GhostWhite" Margin="55,0,0,0" MouseEnter="kadinkategori_MouseEnter" MouseLeave="kadinkategori_MouseLeave" Name="kadinsneak" Click="kadinsneak_Click"/>
                     </Grid>
                 </Grid>
             </Grid>
             <!-- 23.row -->
-            <Image  Grid.Row="4" Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\footer_bilgiler.jpg" ></Image>
+            <Image  Grid.Row="4" Stretch="Fill" Source="/images/icon/footer_bilgiler.jpg" ></Image>
             <!-- 24.row -->
             <Border Grid.Row="5" BorderThickness="1,1,1,1">
                 <Grid>
@@ -348,7 +345,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" VerticalAlignment="Center" Height="20" Margin="15,0,0,0" Text="E-posta adresinizi yazın..."/>
-                        <Image Grid.Column="1" HorizontalAlignment="Left" Height="20" Width="60" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\mail.png"/>
+                        <Image Grid.Column="1" HorizontalAlignment="Left" Height="20" Width="60" Source="/images/icon/mail.png"/>
                     </Grid>
                     <Grid Grid.RowSpan="3" Grid.Column="2">
                         <Grid.ColumnDefinitions>
@@ -364,7 +361,7 @@
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
                         <Button Grid.Column="0" Height="33" Margin="0,10,0,0" Name="facebook" Click="facebook_Click">
-                            <Image Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\facebook.png">
+                            <Image Source="/images/icon/facebook.png">
                             </Image>
                             <Button.Style>
                                 <Style TargetType="{x:Type Button}">
@@ -387,7 +384,7 @@
                             </Button.Style>
                         </Button>
                         <Button Grid.Column="2" Height="33" Margin="0,10,0,0" Name="twitter" Click="Twitter_Click">
-                            <Image Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\twitter.png">
+                            <Image Source="/images/icon/twitter.png">
                             </Image>
                             <Button.Style>
                                 <Style TargetType="{x:Type Button}">
@@ -410,7 +407,7 @@
                             </Button.Style>
                         </Button>
                         <Button Grid.Column="4" Height="33" Margin="0,10,0,0" Name="instagram" Click="instagram_Click" >
-                            <Image Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\instagram.png">
+                            <Image Source="/images/icon/instagram.png">
                             </Image>
                             <Button.Style>
                                 <Style TargetType="{x:Type Button}">
@@ -433,7 +430,7 @@
                             </Button.Style>
                         </Button>
                         <Button Grid.Column="6" Height="33" Margin="0,10,0,0" Click="Button_Click_2">
-                            <Image Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\pinterest.png">
+                            <Image Source="/images/icon/pinterest.png">
                             </Image>
                             <Button.Style>
                                 <Style TargetType="{x:Type Button}">
@@ -456,7 +453,7 @@
                             </Button.Style>
                         </Button>
                         <Button Grid.Column="8" Height="33" Margin="0,10,0,0" Click="Button_Click_2">
-                            <Image Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\google-plus.png">
+                            <Image Source="/images/icon/google-plus.png">
                             </Image>
                             <Button.Style>
                                 <Style TargetType="{x:Type Button}">
@@ -668,7 +665,7 @@
                             </Grid.RowDefinitions>
                             <TextBlock Text="MOBİL UYGULAMALAR" Grid.Row="0" VerticalAlignment="Center" FontSize="15"></TextBlock>
                             <Button  Grid.Row="1" Click="Button_Click_2">
-                                <Image Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\apple_uygulama.png" Height="38" Width="134" VerticalAlignment="Top"></Image>
+                                <Image Stretch="Fill" Source="/images/icon/apple_uygulama.png" Height="38" Width="134" VerticalAlignment="Top"></Image>
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="White"/>
@@ -690,7 +687,7 @@
                                 </Button.Style>
                             </Button>
                             <Button Grid.Column="4" Grid.Row="3" Click="Button_Click_2">
-                                <Image Stretch="Fill" Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\android_uygulama.png" Height="38" Width="134" ></Image>
+                                <Image Stretch="Fill" Source="/images/icon/android_uygulama.png" Height="38" Width="134" ></Image>
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="White"/>
@@ -729,7 +726,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label Height="25.2" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Content="© 2016 - Tüm Hakları Saklıdır." />
-                    <Image Grid.Column="1" Width="66"  Source="C:\Users\Hüseyin\Desktop\bambistoree\WpfApp4\images\icon\Kart.jpg"/>
+                    <Image Grid.Column="1" Width="66"  Source="/images/icon/Kart.jpg"/>
                     <Grid Grid.Column="2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>

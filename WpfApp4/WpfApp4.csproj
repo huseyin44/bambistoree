@@ -55,11 +55,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="kullanıcıkosullari\canta.xaml.cs">
+      <DependentUpon>canta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanıcıkosullari\kadinbot.xaml.cs">
+      <DependentUpon>kadinbot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanıcıkosullari\kadincizme.xaml.cs">
+      <DependentUpon>kadincizme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanıcıkosullari\KadinSneaker.xaml.cs">
+      <DependentUpon>KadinSneaker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanıcıkosullari\uyeol.xaml.cs">
+      <DependentUpon>uyeol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanıcıkosullari\YeniSezon.xaml.cs">
+      <DependentUpon>YeniSezon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kullanıcıkosullari\yenisezonerkek.xaml.cs">
+      <DependentUpon>yenisezonerkek.xaml</DependentUpon>
+    </Compile>
     <Compile Include="usercontrollers\odemesecenekleri.xaml.cs">
       <DependentUpon>odemesecenekleri.xaml</DependentUpon>
     </Compile>
+    <Compile Include="usercontrollers\resimbuyutme.xaml.cs">
+      <DependentUpon>resimbuyutme.xaml</DependentUpon>
+    </Compile>
     <Compile Include="usercontrollers\UrunOzellikleri.xaml.cs">
       <DependentUpon>UrunOzellikleri.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrollers\urunsepeteekleekrani.xaml.cs">
+      <DependentUpon>urunsepeteekleekrani.xaml</DependentUpon>
     </Compile>
     <Compile Include="usercontrollers\UserControlYorumlar.xaml.cs">
       <DependentUpon>UserControlYorumlar.xaml</DependentUpon>
@@ -67,6 +94,10 @@
     <Compile Include="usercontrollers\Useriptal.xaml.cs">
       <DependentUpon>Useriptal.xaml</DependentUpon>
     </Compile>
+    <Page Include="kullanıcıkosullari\canta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="kullanıcıkosullari\gizlilikguvenlik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -91,6 +122,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="kullanıcıkosullari\kadinbot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanıcıkosullari\kadincizme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanıcıkosullari\KadinSneaker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="kullanıcıkosullari\Page1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -112,6 +155,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="kullanıcıkosullari\uyegirisi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanıcıkosullari\uyeol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanıcıkosullari\YeniSezon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kullanıcıkosullari\yenisezonerkek.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -167,7 +222,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="usercontrollers\resimbuyutme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="usercontrollers\UrunOzellikleri.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="usercontrollers\urunsepeteekleekrani.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -233,9 +296,6 @@
     <Resource Include="images\yenisezonun trendleri.jpg" />
     <Resource Include="slide\sl01.jpg" />
     <Resource Include="slide\sl02.jpg" />
-    <Resource Include="slide\sl03.jpg" />
-    <Resource Include="slide\sl04.jpg" />
-    <Resource Include="slide\sl05.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\pudra-kadin-ayakkabi-1.jpg" />
@@ -292,6 +352,103 @@
   <ItemGroup>
     <Resource Include="images\hizli-kargo-.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\lgold-firsat-sandalet-b0867651809-1cf3.jpg" />
+    <Resource Include="images\lgold-firsat-sandalet-b0867651809-ed46.jpg" />
+    <Resource Include="images\lila-firsat-spor-b0884010518-3591.jpg" />
+    <Resource Include="images\lila-firsat-spor-b0884010518-d23e.jpg" />
+    <Resource Include="images\vizon-beyaz-outlet-ayakkabi-b0804098938-c89c.jpg" />
+    <Resource Include="images\vizon-beyaz-outlet-ayakkabi-b0804098938-ebad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\erkekbot\black-erkek-bot-k1111110403-6e01.jpg" />
+    <Resource Include="images\erkekbot\black-erkek-bot-k1111110403-d3ae.jpg" />
+    <Resource Include="images\erkekbot\brown-erkek-bot-k1111110403-2917.jpg" />
+    <Resource Include="images\erkekbot\brown-erkek-bot-k1111110403-8d6c.jpg" />
+    <Resource Include="images\erkekbot\dark-grey-erkek-bot-k1111110403-46eb.jpg" />
+    <Resource Include="images\erkekbot\dark-grey-erkek-bot-k1111110403-e415.jpg" />
+    <Resource Include="images\erkekbot\dark-olive-erkek-bot-k1111000101-19a7.jpg" />
+    <Resource Include="images\erkekbot\dark-olive-erkek-bot-k1111000101-e1b3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\erkekbot\black-baskili-erkek-bot-k1111122601-337e.jpg" />
+    <Resource Include="images\erkekbot\black-baskili-erkek-bot-k1111122601-f5d3.jpg" />
+    <Resource Include="images\erkekbot\black-erkek-bot-k1111119301-806b.jpg" />
+    <Resource Include="images\erkekbot\black-erkek-bot-k1111119301-f72a.jpg" />
+    <Resource Include="images\erkekbot\black-erkek-bot-k1111123603-4f99.jpg" />
+    <Resource Include="images\erkekbot\black-erkek-bot-k1111123603-8a4e.jpg" />
+    <Resource Include="images\erkekbot\coffee-erkek-bot-k1111123603-943b.jpg" />
+    <Resource Include="images\erkekbot\coffee-erkek-bot-k1111123603-9c9b.jpg" />
+    <Resource Include="images\erkekbot\grey-erkek-bot-k1111122601-44fe.jpg" />
+    <Resource Include="images\erkekbot\grey-erkek-bot-k1111122601-7bbe.jpg" />
+    <Resource Include="images\erkekbot\honey-bot-k1111000101-f679.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\erkekbot\honey-erkek-bot-k1111000101-afdf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\kursun-canta-g3518630009-54b2.jpg" />
+    <Resource Include="images\kursun-canta-g3518630009-ebe5.jpg" />
+    <Resource Include="images\siyah-canta-g3485089309-4857.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\adc19515-23f4-413a-bcbb-b811023b3fa6 - Kopya.jpg" />
+    <Resource Include="images\black-bayan-bot-k0777256001-8ab7 - Kopya.jpg" />
+    <Resource Include="images\black-bayan-bot-k0777256001-f703 - Kopya.jpg" />
+    <Resource Include="images\caterpillar-dark-olive-bot-k0111118401-3965 - Kopya.jpg" />
+    <Resource Include="images\d24c90b0-1906-44e5-b687-2074fef1536e - Kopya.jpg" />
+    <Resource Include="images\dark-olive-bot-k0111118401-6d00 - Kopya.jpg" />
+    <Resource Include="images\olive-bayan-bot-k0777032103-f68c - Kopya.jpg" />
+    <Resource Include="images\olive-bot-k0777032103-9379 - Kopya.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\rose-bot-d0189007739-0bea.jpg" />
+    <Resource Include="images\rose-bot-d0189007739-cdc3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\olive-bayan-bot-k0777052503-9c0f.jpg" />
+    <Resource Include="images\olive-bayan-bot-k0777052503-a9c3.jpg" />
+  </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\black-bayan-cizme-k0777022303-123b.jpg" />
+    <Resource Include="images\black-bayan-cizme-k0777032903-32a8.jpg" />
+    <Resource Include="images\black-bayan-cizme-k0777032903-6219.jpg" />
+    <Resource Include="images\black-bayan-cizme-k0777053303-647d.jpg" />
+    <Resource Include="images\black-cizme-k0777053303-e44e.jpg" />
+    <Resource Include="images\d.brown-kadin-cizme-k0777005803-758f.jpg" />
+    <Resource Include="images\harley-davidson-black-cizme-k0777005803-943d.jpg" />
+    <Resource Include="images\harley-davidson-black-cizme-k0777022303-676d.jpg" />
+    <Resource Include="images\harley-davidson-d.brown-cizme-k077700580-5931.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\black-bayan-cizme-k0777005803-fd72.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\kadinsneakers\altinbeyaz-kadin-sneakers-l0512430609-3ca3.jpg" />
+    <Resource Include="images\kadinsneakers\altinbeyaz-kadin-sneakers-l0512430609-fba4.jpg" />
+    <Resource Include="images\kadinsneakers\beyaz-kadin-sneakers-l0509320009-8215.jpg" />
+    <Resource Include="images\kadinsneakers\beyazbeyaz-kadin-sneakers-l0512430609-06a9.jpg" />
+    <Resource Include="images\kadinsneakers\beyazbeyaz-kadin-sneakers-l0512430609-66b2.jpg" />
+    <Resource Include="images\kadinsneakers\beyazhardal-kadin-sneakers-l0512438309-5cf7.jpg" />
+    <Resource Include="images\kadinsneakers\beyazhardal-kadin-sneakers-l0512438309-d4a6.jpg" />
+    <Resource Include="images\kadinsneakers\beyazmavi-holog.-kadin-sneakers-l0510333-291b.jpg" />
+    <Resource Include="images\kadinsneakers\beyazmavi-holog.-kadin-sneakers-l0510333-2fd1.jpg" />
+    <Resource Include="images\kadinsneakers\grisiyah-kadin-sneakers-l0509320009-0985.jpg" />
+    <Resource Include="images\kadinsneakers\grisiyah-kadin-sneakers-l0509320009-a445.jpg" />
+    <Resource Include="images\kadinsneakers\pudrasari-kadin-sneakers-l0509320009-16c1.jpg" />
+    <Resource Include="images\kadinsneakers\pudrasari-kadin-sneakers-l0509320009-288b.jpg" />
+    <Resource Include="images\kadinsneakers\siyah-kadin-sneakers-l0509320009-da06.jpg" />
+    <Resource Include="images\kadinsneakers\siyah-kadin-sneakers-l0509320009-f710.jpg" />
+    <Resource Include="images\kadinsneakers\siyah-kadin-sneakers-l0512436765-1e66.jpg" />
+    <Resource Include="images\kadinsneakers\siyah-kadin-sneakers-l0512436765-6156.jpg" />
+    <Resource Include="images\kadinsneakers\siyahsiyah-kadin-sneakers-l0512430609-464b.jpg" />
+    <Resource Include="images\kadinsneakers\siyahsiyah-kadin-sneakers-l0512430609-b25c.jpg" />
+    <Resource Include="images\kadinsneakers\siyahsiyah-kadin-sneakers-l0512435209-2cd4.jpg" />
+    <Resource Include="images\kadinsneakers\siyahsiyah-kadin-sneakers-l0512435209-fe56.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\kadinsneakers\beyaz-kadin-sneakers-l0509320009-dac2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
